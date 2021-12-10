@@ -1,5 +1,5 @@
 import React,{useState,useEffect} from 'react';
-import { useTransition, animated, config } from 'react-spring';
+import { useTransition, animated, config } from 'react-spring/web';
 import image0 from "../../Assets/Image_0.jpg";
 import image1 from "../../Assets/Image_1.jpg";
 import image2 from "../../Assets/Image_2.jpg";
