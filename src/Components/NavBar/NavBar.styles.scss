@@ -1,0 +1,90 @@
+
+    .HomePage-NavBar{
+        width: -webkit-fill-available;
+        position: fixed;
+        padding: 15px 50px;
+        top: 0;
+        height: 80px;
+        z-index: 3;
+        background-color: transparent;
+        transition: all .5s ease .25s;
+    
+
+    
+        .NavBar-Container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 90px;
+    
+        .Navbar-Title{
+            font-size: 30px;
+            color:white;
+            text-decoration: none;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 900;
+        }
+    
+        .Cart-Logo{
+            height: 50px;
+            width: 50px;
+            fill: white;
+            margin-left: 25px;
+        }
+    
+        .Navbar-Links{
+            text-decoration: none;
+            color: #777;
+            list-style-type: none;
+            margin-left: 25px;
+            margin-right: 25px;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 900;
+            font-size: 15px;
+            letter-spacing: 2.5px;
+            transition: all .5s ease ;
+    
+            &:hover{
+                color:white;
+                transition: all .5s ease ;
+            }
+        }
+
+        .Navbar-Links-Scroll{
+            text-decoration: none;
+            color: white;
+            list-style-type: none;
+            margin-left: 25px;
+            margin-right: 25px;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 900;
+            font-size: 15px;
+            letter-spacing: 2.5px;
+            transition: all .5s ease ;
+    
+            &:hover{
+                color:#777;
+                transition: all .5s ease ;
+            }
+        }
+        
+        ul{
+            display: flex;
+            align-items: center;
+        }
+        li{
+            list-style-type: none;
+        } 
+        }
+    
+    
+    }
+    
+
+
+
+
+
+
+
+
