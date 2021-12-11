@@ -1,0 +1,39 @@
+.Shop-Menu{
+    position: relative;
+    z-index: 3;
+    margin-top: 10rem;
+
+    ul{
+        list-style: none;
+        display: flex;
+        width: 80%;
+        justify-content: space-evenly;
+        margin: 0 auto;
+        border-top: 1px solid #dddddd;
+        border-bottom: 1px solid #dddddd;
+        padding-top: 10px;
+        padding-bottom: 10px;
+
+        li{
+            cursor: pointer;
+            color: #1b1e2f;
+            font-family: "Montserrat", sans-serif;
+            font-size: 14px;
+            transition: all 0.5s ease;
+
+            &:hover{
+                color:#68a5c1;
+                transition: all 0.5s ease;
+            }
+        }
+    }
+}
+
+.Carousel-Wrapper{
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 2rem;
+    .Carousel{
+        --loader-bar-color:#282828;
+    }
+}

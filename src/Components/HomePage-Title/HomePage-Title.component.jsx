@@ -2,6 +2,8 @@ import React from 'react';
 import "./HomePage-Title.styles.scss";
 import { ReactComponent as TextDivider } from '../../Assets/text-divider.svg';
 
+
+
 const HomePageTitle = () =>{
     return (
         <section className="Title-Section">
