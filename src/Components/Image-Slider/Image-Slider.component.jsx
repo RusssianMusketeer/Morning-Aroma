@@ -25,7 +25,7 @@ const ImageSlider = ({images, ...props}) => {
       config: config.molasses,
     });
 
-    //useEffect(() => void setInterval(() => setIndex(state => (state + 1) % 5), 3000), [])
+    useEffect(() => void setInterval(() => setIndex(state => (state + 1) % 5), 3000), [])
   
   
       return( transitions.map(({key,item,props})=>(
