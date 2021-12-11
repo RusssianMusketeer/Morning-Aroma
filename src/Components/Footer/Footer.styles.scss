@@ -1,0 +1,43 @@
+.Footer{
+    background-color: #282828;
+    padding: 7px 30px;
+    height: 250px;
+    position: relative;
+
+    .Footer-div{
+        text-align: center;
+        margin-top: 2rem;
+
+        svg{
+            transition: all .5s ease ;
+            &:hover{
+                fill: #777!important;
+                transition: all .5s ease ;
+            }
+        }
+
+        h5{
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color:white;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            margin-top: 0.5rem;
+            cursor: pointer;
+            transition: all .5s ease ;
+            &:hover{
+                color: #777;
+                transition: all .5s ease ;
+            }
+        }
+
+        p{
+            color:white;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 700;
+            margin-top: 2rem;
+            
+        }
+    }
+}

@@ -9,10 +9,19 @@ import { ReactComponent as IconCoffee } from '../../Assets/icon-coffee-bean.svg'
 import { ReactComponent as IconGift } from '../../Assets/icon-gift.svg';
 import { ReactComponent as IconTruck } from '../../Assets/icon-truck.svg';
 import {ReactComponent as Logo} from "../../Assets/Morning Aroma.svg";
+import Footer from '../../Components/Footer/Footer.component';
+import { useEffect, useState } from 'react';
+
 
 const HomePage = () =>{
+    const [click, setClick] = useState();
+    useEffect(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }, [click]);
+    
     return (
         <div className="HomePage-container">
+        
         <ImageSlider/>
         <NavBar/>
         <HomePageTitle/>
@@ -75,6 +84,7 @@ const HomePage = () =>{
             </div>
             </div>
         </section>
+        <Footer prop={setClick}/>
         
         </div>
     )
