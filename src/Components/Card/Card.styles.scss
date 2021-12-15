@@ -1,0 +1,42 @@
+.Card{
+    width: fit-content;
+    height: fit-content;
+    margin: 0 auto;
+    margin-bottom: 4rem;
+    img{
+        transition: all .5s ease .25s;
+    }
+    
+    &:hover{
+        
+        cursor: pointer;
+        img{
+            transition: all .5s ease .25s;
+            opacity: 0.75;
+        }
+    }
+
+    .Product-info{
+        left: 1.3rem;
+        position: relative;
+        
+
+    h4{
+        color: #1b1e2f;
+        font-family: Montserrat,sans-serif;
+        font-size: .9em;
+        line-height: 1.4;
+        font-weight: 700;
+        margin-bottom: 0;
+    }
+
+    p{
+    font-family: Montserrat,sans-serif;
+    font-size: .75em;
+    line-height: 1.5;
+    color: #2e334f;
+    margin-top: 0.5rem;
+    }
+}
+
+}

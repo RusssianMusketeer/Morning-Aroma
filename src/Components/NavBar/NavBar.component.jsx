@@ -4,9 +4,12 @@ import { useState,useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import {ReactComponent as Cart} from "../../Assets/Cart.svg";
 import {ReactComponent as Logo} from "../../Assets/Morning Aroma.svg";
+import useSound from 'use-sound';
+import music from "../../Assets/Jazz.mp3";
 
 const NavBar = () => {
     const [scroll, setScroll] = useState(false);
+    const [play] = useSound(music);
     useEffect(() => {
         window.addEventListener("scroll", () => {
           setScroll(window.scrollY > 60);

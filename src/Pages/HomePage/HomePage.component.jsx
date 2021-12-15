@@ -13,6 +13,7 @@ import Footer from '../../Components/Footer/Footer.component';
 import { useEffect, useState } from 'react';
 
 
+
 const HomePage = () =>{
     const [click, setClick] = useState();
     useEffect(() => {
