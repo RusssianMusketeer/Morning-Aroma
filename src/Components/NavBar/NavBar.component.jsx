@@ -11,7 +11,7 @@ import music from "../../Assets/Jazz.mp3";
 const NavBar = () => {
     const [scroll, setScroll] = useState(false);
     const [checked, setChecked] = useState(true);
-    const [play,{stop}] = useSound(process.env.PUBLIC_URL + '/Jazz.mp3', {interrupt: true});
+    const [play,{stop}] = useSound(music, {interrupt: true});
     console.log(checked)
     useEffect(() => {
         window.addEventListener("scroll", () => {
