@@ -6,6 +6,7 @@ import {ReactComponent as Cart} from "../../Assets/Cart.svg";
 import {ReactComponent as Logo} from "../../Assets/Morning Aroma.svg";
 import useSound from 'use-sound';
 import Toggle from 'react-toggle'
+import music from "../../Assets/Jazz.mp3";
 
 const NavBar = () => {
     const [scroll, setScroll] = useState(false);
