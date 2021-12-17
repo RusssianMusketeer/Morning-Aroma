@@ -6,25 +6,28 @@ import {ReactComponent as Cart} from "../../Assets/Cart.svg";
 import {ReactComponent as Logo} from "../../Assets/Morning Aroma.svg";
 import useSound from 'use-sound';
 import Toggle from 'react-toggle'
+import music from "../../Assets/Jazz.mp3";
+
+
 
 const NavBar = () => {
     
-    let audio = new Audio("/Jazz.mp3")
+    
     const [scroll, setScroll] = useState(false);
-    const [checked, setChecked] = useState(true);
-    const [play,{stop}] = useSound("/Jazz.mp3", {interrupt: true});
+    const [checked, setChecked] = useState(false);
+    const [play,{stop}] = useSound(music, {interrupt: true});
     console.log(checked)
     useEffect(() => {
         window.addEventListener("scroll", () => {
           setScroll(window.scrollY > 60);
         });
       }, []);
-      useEffect(() => {
-        play();
+      useEffect( () =>  {
+         play();
+        
       }, []);  
     return (
         <nav className="HomePage-NavBar" style={scroll ? {backgroundColor:"#282828", padding: "7px 30px"} : {backgroundColor:"transparent"} }>
-            
             <div className="NavBar-Container">
                 <div>
                               <Link className="Navbar-Title" to ="/"><Logo style={{width: "150px"}}/></Link>
@@ -53,7 +56,8 @@ const NavBar = () => {
                         </li>
 
                         <li>
-                        <Toggle
+                         
+                        <Toggle 
                         defaultChecked={checked}
                         checked={checked===true ? true : false}
                         onChange={checked=== true ? ()=>{setChecked(!checked); stop()} :()=>{setChecked(!checked); play() }}
