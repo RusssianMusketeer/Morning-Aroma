@@ -6,15 +6,13 @@ import {ReactComponent as Cart} from "../../Assets/Cart.svg";
 import {ReactComponent as Logo} from "../../Assets/Morning Aroma.svg";
 import useSound from 'use-sound';
 import Toggle from 'react-toggle'
-import music from "../../Assets/Jazz.mp3";
-
 
 const NavBar = () => {
     
     
     const [scroll, setScroll] = useState(false);
     const [checked, setChecked] = useState(true);
-    const [play,{stop}] = useSound(music, {interrupt: true});
+    const [play,{stop}] = useSound(process.env.PUBLIC_URL + "/Jazz.mp3", {interrupt: true});
     console.log(checked)
     useEffect(() => {
         window.addEventListener("scroll", () => {
