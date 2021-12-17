@@ -8,7 +8,10 @@ import useSound from 'use-sound';
 import Toggle from 'react-toggle'
 import music from "../../Assets/Jazz.mp3";
 
+
 const NavBar = () => {
+    
+    
     const [scroll, setScroll] = useState(false);
     const [checked, setChecked] = useState(true);
     const [play,{stop}] = useSound(music, {interrupt: true});
@@ -55,7 +58,8 @@ const NavBar = () => {
                         defaultChecked={checked}
                         checked={checked===true ? true : false}
                         onChange={checked=== true ? ()=>{setChecked(!checked); stop()} :()=>{setChecked(!checked); play() }}
-                        />
+                        >
+                        </Toggle>
 
                         </li>
                         <li>
