@@ -9,10 +9,10 @@ import Toggle from 'react-toggle'
 
 const NavBar = () => {
     
-    
+    let audio = new Audio("/Jazz.mp3")
     const [scroll, setScroll] = useState(false);
     const [checked, setChecked] = useState(true);
-    const [play,{stop}] = useSound(process.env.PUBLIC_URL + "/Jazz.mp3", {interrupt: true});
+    const [play,{stop}] = useSound("/Jazz.mp3", {interrupt: true});
     console.log(checked)
     useEffect(() => {
         window.addEventListener("scroll", () => {
@@ -21,9 +21,10 @@ const NavBar = () => {
       }, []);
       useEffect(() => {
         play();
-      }, [play]);  
+      }, []);  
     return (
         <nav className="HomePage-NavBar" style={scroll ? {backgroundColor:"#282828", padding: "7px 30px"} : {backgroundColor:"transparent"} }>
+            
             <div className="NavBar-Container">
                 <div>
                               <Link className="Navbar-Title" to ="/"><Logo style={{width: "150px"}}/></Link>
