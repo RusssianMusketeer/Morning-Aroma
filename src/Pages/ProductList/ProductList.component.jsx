@@ -5,7 +5,7 @@ import AwesomeSlider from 'react-awesome-slider';
 import withAutoplay from 'react-awesome-slider/dist/autoplay';
 import 'react-awesome-slider/dist/styles.css';
 import CardList from '../../Components/CardList/CardList.component';
-
+import NavBar from '../../Components/NavBar/NavBar.component';
 import image1 from "../../Assets/Carousel_1.jpg";
 import image2 from "../../Assets/Carouse_2.jpg";
 import image3 from "../../Assets/Carousel_3.jpg";

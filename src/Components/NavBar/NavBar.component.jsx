@@ -1,30 +1,23 @@
 import React from 'react';
 import "./NavBar.styles.scss";
 import { useState,useEffect} from 'react';
+import MusicContext from '../../Context/musicContext';
 import { Link } from 'react-router-dom';
 import {ReactComponent as Cart} from "../../Assets/Cart.svg";
 import {ReactComponent as Logo} from "../../Assets/Morning Aroma.svg";
-import useSound from 'use-sound';
 import Toggle from 'react-toggle'
-import music from "../../Assets/Jazz.mp3";
-
-
+import { useContext } from 'react';
 
 const NavBar = () => {
-    
-    
+
+    const {play, stop, checked, setChecked} =useContext(MusicContext);
     const [scroll, setScroll] = useState(false);
-    const [checked, setChecked] = useState(false);
-    const [play,{stop}] = useSound(music, {interrupt: true});
-    console.log(checked)
+    
+    
     useEffect(() => {
         window.addEventListener("scroll", () => {
           setScroll(window.scrollY > 60);
         });
-      }, []);
-      useEffect( () =>  {
-         play();
-        
       }, []);  
     return (
         <nav className="HomePage-NavBar" style={scroll ? {backgroundColor:"#282828", padding: "7px 30px"} : {backgroundColor:"transparent"} }>

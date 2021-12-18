@@ -3,14 +3,21 @@ import "./NavBarSite.styles.scss";
 import { Link } from 'react-router-dom';
 import {ReactComponent as Cart} from "../../Assets/Cart.svg";
 import {ReactComponent as Logo} from "../../Assets/Morning Aroma.svg";
+import Toggle from 'react-toggle'
+import MusicContext from '../../Context/musicContext';
+import { useContext } from 'react';
+
 
 const NavBarSite = () => {
+    
+    const {play, stop, checked, setChecked} =useContext(MusicContext);
+
    
     return (
         <nav className="HomePage-NavBar-Site" >
             <div className="NavBar-Container-Site">
                 <div>
-                              <Link className="Navbar-Title-Site" to ="/"><Logo style={{width: "150px"}}/></Link>
+                <Link className="Navbar-Title-Site" to ="/"><Logo style={{width: "150px"}}/></Link>
                </div>
                 <div >
                     <ul>
@@ -33,6 +40,15 @@ const NavBarSite = () => {
                             <Link className="Navbar-Links-Site"  to="/sign-in">
                                 SIGN IN
                             </Link>
+                        </li>
+                        <li>
+                        <Toggle 
+                        defaultChecked={checked}
+                        checked={checked===true ? true : false}
+                        onChange={checked=== true ? ()=>{setChecked(!checked); stop()} :()=>{setChecked(!checked); play() }}
+                        >
+                        </Toggle>
+
                         </li>
                         <li>
                         <Link to="/cart" >
