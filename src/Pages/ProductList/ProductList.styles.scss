@@ -9,8 +9,8 @@
         width: 87%;
         justify-content: space-evenly;
         margin: 0 auto;
-        border-top: 1.5px solid #dddddd;
-        border-bottom: 1.5px solid #dddddd;
+        border-top: 2px solid #dddddd;
+        border-bottom: 2px solid #dddddd;
         padding-top: 10px;
         padding-bottom: 10px;
 
@@ -20,9 +20,10 @@
             font-family: "Montserrat", sans-serif;
             font-size: 14px;
             transition: all 0.5s ease;
+            font-weight: 500;
 
             &:hover{
-                color:#68a5c1;
+                color:#68a5c1!important;
                 transition: all 0.5s ease;
             }
         }

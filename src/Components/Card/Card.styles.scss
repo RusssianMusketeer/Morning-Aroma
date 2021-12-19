@@ -4,14 +4,14 @@
     margin: 0 auto;
     margin-bottom: 4rem;
     img{
-        transition: all .5s ease .25s;
+        transition: all .3s ease .25s;
     }
     
     &:hover{
         
         cursor: pointer;
         img{
-            transition: all .5s ease .25s;
+            transition: all .3s ease .25s;
             opacity: 0.75;
         }
     }

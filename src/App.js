@@ -5,16 +5,26 @@ import Pay from "./Components/Pay/pay.component";
 import HomePage from './Pages/HomePage/HomePage.component';
 import ProductList from './Pages/ProductList/ProductList.component';
 import { MusicProvider } from './Context/musicContext';
-
+import DarkRoast from './Pages/Shop/DarkRoast/DarkRoast.component';
+import ShopHomePage from './Pages/Shop/ShopHomePage/ShopHomePage.component';
+import LightRoast from './Pages/Shop/LightRoast/LightRoast.component';
+import Espresso from './Pages/Shop/Espresso/Espresso.component';
+import Decaf from './Pages/Shop/Decaf/Decaf.component';
 
 const App =()=>{
   return(
     <div className="App">
       <MusicProvider>
     <Routes>
+    <Route path="/" element={<HomePage/>}/>
       <Route path="/pay" element={<Pay/>}/> 
-      <Route path="/" element={<HomePage/>}/>
-      <Route path="/shop" element={<ProductList/>}/>
+      <Route path="shop" element={<ProductList/>}>
+        <Route path="" element={<ShopHomePage/>}/>
+        <Route path="Dark_Roast" element={<DarkRoast/>}/>
+        <Route path="Light_Roast" element={<LightRoast/>}/>
+        <Route path="Espresso" element={<Espresso/>}/>
+        <Route path="Decaf" element={<Decaf/>}/>
+      </Route>
      </Routes>
      </MusicProvider>
      </div>

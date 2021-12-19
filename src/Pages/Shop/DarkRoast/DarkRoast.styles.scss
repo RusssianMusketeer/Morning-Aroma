@@ -1,0 +1,52 @@
+.DarkRoast-section{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 3rem;
+
+    .DarkRoast-header-name{
+        color: #1b1e2f;
+        font-family: Montserrat,sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        margin: 0 0 15px;
+        font-size: 35px;   
+    }
+
+    .DarkRoast-div{
+    display: flex;
+    align-items: center;
+
+    .info-tag{
+        font-family: Montserrat,sans-serif;
+        font-weight: 500;
+        color: #1b1e2f;
+        margin: 0;
+        
+    }
+
+    .DarkRoast-Tag{
+        font-family: Montserrat,sans-serif;
+        font-weight: 500;
+        color: #1b1e2f;
+        margin: 0;
+        margin-left: 0.7rem;
+    }
+
+    .arrow-right{
+        width: 15px;
+        height: 15px;
+        position: relative;
+        margin-left: 0.7rem;   
+    }
+}
+
+header{
+    margin-top: 3rem;
+}
+p{
+    font-size: 16px;
+    line-height: 1.7;
+    font-family: Montserrat,sans-serif;
+    font-weight: 400; 
+}
+}
