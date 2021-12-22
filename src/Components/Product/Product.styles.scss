@@ -1,0 +1,99 @@
+.Product-section{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 3rem;
+.Product-div{
+    display: flex;
+    align-items: center;
+
+    .Product-info-tag{
+        font-family: Montserrat,sans-serif;
+        font-weight: 500;
+        color: #1b1e2f;
+        margin: 0;
+
+    
+        
+    }
+
+    .Product-Tag{
+        font-family: Montserrat,sans-serif;
+        font-weight: 500;
+        color: #1b1e2f;
+        margin: 0;
+        margin-left: 0.7rem;
+    }
+
+    .arrow-right{
+        width: 15px;
+        height: 15px;
+        position: relative;
+        margin-left: 0.7rem;   
+    }
+}
+.Product-image-info{
+    margin-top: 4rem;
+    margin-left: 8rem;
+    display: flex;
+    margin-bottom: 4rem;
+
+    h3{
+        font-family: Montserrat,sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        color: #1b1e2f;
+        font-size: 22px;
+        margin: 0.1rem 0;
+    }
+
+    h1{
+        font-family: Montserrat,sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        color: #1b1e2f;
+        font-size: 30px;
+        margin: 0;
+    }
+
+    span{
+        color: #68a5c1;
+        font-size: 23px;
+        font-weight: 700;
+        position: relative;
+        top: 1.5rem;
+    
+    }
+
+    label{
+        margin-top: 2.5rem;
+        font-size: 18px;
+    line-height: 1.7;
+    font-family: Montserrat,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #1b1e2f;
+    margin-bottom: 0.2rem;
+    }
+
+    select{
+        background-color: #fff;
+        text-indent: 0.01px;
+        cursor: pointer;
+        border: 1px solid rgba(27,30,47,.15);
+        width: 100%;
+        max-width: 100%;
+        display: block;
+        margin: 0 0 1em;
+        color: #333;
+        padding: 8px 10px;
+        line-height: 1.42;
+        font-family: Montserrat,sans-serif;
+        font-size: 16px;
+    }
+    .Coffe-Image-Product{
+        width: 600px;
+    }
+
+}
+}
+

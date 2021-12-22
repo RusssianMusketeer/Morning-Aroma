@@ -3,10 +3,17 @@ import NavBarSite from '../../Components/NavBarSite/NavBarSite.component';
 import 'react-awesome-slider/dist/styles.css';
 import { Outlet,Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
+import Footer from '../../Components/Footer/Footer.component';
+import { useState, useEffect } from "react";
 
 
 const ProductList = () => {
     const path = useLocation().pathname;
+    const [click, setClick] = useState();
+    useEffect(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }, [click]);
+    
     
     return(
         <section>
@@ -23,6 +30,7 @@ const ProductList = () => {
             
         </div>
         <Outlet/>
+        <Footer prop={setClick}/>
         </section>
     ) 
 };

@@ -10,6 +10,7 @@ import ShopHomePage from './Pages/Shop/ShopHomePage/ShopHomePage.component';
 import LightRoast from './Pages/Shop/LightRoast/LightRoast.component';
 import Espresso from './Pages/Shop/Espresso/Espresso.component';
 import Decaf from './Pages/Shop/Decaf/Decaf.component';
+import Product from './Components/Product/Product.component';
 
 const App =()=>{
   return(
@@ -19,8 +20,11 @@ const App =()=>{
     <Route path="/" element={<HomePage/>}/>
       <Route path="/pay" element={<Pay/>}/> 
       <Route path="shop" element={<ProductList/>}>
-        <Route path="" element={<ShopHomePage/>}/>
-        <Route path="Dark_Roast" element={<DarkRoast/>}/>
+        <Route index element={<ShopHomePage/>}/>
+        <Route path=":product" element={<Product/>}/>
+        <Route path="Dark_Roast" element={<DarkRoast/>}>
+        <Route path=":product" element={<Product/>}/>
+        </Route>
         <Route path="Light_Roast" element={<LightRoast/>}/>
         <Route path="Espresso" element={<Espresso/>}/>
         <Route path="Decaf" element={<Decaf/>}/>

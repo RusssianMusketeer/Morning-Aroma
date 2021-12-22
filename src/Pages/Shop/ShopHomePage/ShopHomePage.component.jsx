@@ -6,11 +6,13 @@ import image3 from "../../../Assets/Carousel_3.jpg";
 import withAutoplay from 'react-awesome-slider/dist/autoplay';
 import AwesomeSlider from 'react-awesome-slider';
 import "./ShopHomePage.styles.scss";
+import { Outlet } from "react-router-dom";
 
 const ShopHomePage = () => {
     const AutoplaySlider = withAutoplay(AwesomeSlider);
 return (
     <section>
+    <Outlet/>
 <div className="Carousel-Wrapper">
         <AutoplaySlider
         play={true}
