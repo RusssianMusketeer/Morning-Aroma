@@ -58,7 +58,7 @@ const Product = () => {
         <div className="Product-recommendation">
                 <h2 className="recommendation-tag">You may also like</h2>
                 <div className="CardList-recommended">
-                {CoffeData.coffees.slice(4).map((coffee,index) =>(
+                {CoffeData.coffees.slice(0,4).map((coffee,index) =>(
                 <Card key ={index} prop={coffee}/>
                 ))}
                 </div>

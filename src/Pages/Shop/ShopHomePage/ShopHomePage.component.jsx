@@ -7,6 +7,8 @@ import withAutoplay from 'react-awesome-slider/dist/autoplay';
 import AwesomeSlider from 'react-awesome-slider';
 import "./ShopHomePage.styles.scss";
 import { Outlet } from "react-router-dom";
+import CoffeData from "../../../Data/products";
+import Card from "../../../Components/Card/Card.component";
 
 const ShopHomePage = () => {
     const AutoplaySlider = withAutoplay(AwesomeSlider);
@@ -30,7 +32,11 @@ return (
     </AutoplaySlider>
       </div>
       <h2 className="popular">Popular selection</h2>
-    <CardList/>
+      <div className="Shop-homepage-list">
+      {CoffeData.coffees.slice(0,8).map((coffee,index) =>(
+                <Card key ={index} prop={coffee}/>
+                ))}
+        </div>
 
     </section>)
 };

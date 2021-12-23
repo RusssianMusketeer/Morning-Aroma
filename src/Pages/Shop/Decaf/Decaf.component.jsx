@@ -14,7 +14,7 @@ const Decaf = () => {
             <h1 className="DarkRoast-header-name">Decaf</h1>
         </header>
         <p>Decaf is short for decaffeinated coffee. It's coffee from coffee beans that have had at least 97% of their caffeine removed. There are many ways to remove caffeine from coffee beans. ... Caffeine can also be removed using carbon dioxide or a charcoal filter — a method known as the Swiss Water Process.</p>
-        <CardList/>    
+        <CardList name="Decaf"/>    
     </section>)
 };
 

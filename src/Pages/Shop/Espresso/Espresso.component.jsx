@@ -14,7 +14,7 @@ const Espresso = () => {
             <h1 className="DarkRoast-header-name">Espresso</h1>
         </header>
         <p>Espresso is a coffee-brewing method of Italian origin, in which a small amount of nearly boiling water is forced under 9–10 bars of pressure through finely-ground coffee beans. Espresso coffee can be made with a wide variety of coffee beans and roast degrees.</p>
-        <CardList/>    
+        <CardList name="Espresso"/>    
     </section>)
 };
 

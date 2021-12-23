@@ -14,7 +14,7 @@ const DarkRoast = () => {
             <h1 className="DarkRoast-header-name">Dark Roast</h1>
         </header>
         <p>Dark Roast coffees are dark brown, even close to a blackened color. The beans are characterized by drawn-out oil that glosses the surface. Coffee made from a Dark Roast has a robust, full body. The flavors from the coffee's country of origin are almost entirely roasted out, taking on a very bold and smoky taste.</p>
-        <CardList/>    
+        <CardList name="Dark Roast"/>    
     </section>)
 };
 
