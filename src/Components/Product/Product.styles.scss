@@ -55,12 +55,12 @@
         margin: 0;
     }
 
-    span{
+    .price{
         color: #68a5c1;
         font-size: 23px;
         font-weight: 700;
         position: relative;
-        top: 1.5rem;
+        top: 1rem;
     
     }
 
@@ -73,6 +73,16 @@
     font-style: normal;
     color: #1b1e2f;
     margin-bottom: 0.2rem;
+    }
+    .coffe-quantity{
+        margin-top: 0;
+        font-size: 18px;
+    line-height: 1.7;
+    font-family: Montserrat,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #1b1e2f;
+    margin-bottom: 0.2rem;  
     }
 
     select{
@@ -89,9 +99,91 @@
         line-height: 1.42;
         font-family: Montserrat,sans-serif;
         font-size: 16px;
+        
+        
     }
+
+    input {
+        font-family: Montserrat,sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 1em;
+        padding: 8px 10px;
+        line-height: 1.42;
+        border: 1px solid rgba(27,30,47,.15);
+        width: 100px;
+    }
+
+    .add-to-cart-button{
+        display: inline-block;
+        padding: 8px 16px;
+        margin: 0;
+        font-size: .875em;
+        font-family: Montserrat,sans-serif;
+        font-weight: 500;
+        font-style: normal;
+        letter-spacing: .1em;
+        text-transform: uppercase;
+        line-height: 1.8;
+        text-decoration: none;
+        text-align: center;
+        vertical-align: middle;
+        min-height: 44px;
+        white-space: nowrap;
+        cursor: pointer;
+        border: 1px solid transparent;
+        position: relative;
+        margin-top: 1.5rem;
+        background-color: transparent;
+        color: #68a5c1;
+        border-color: #68a5c1;
+        white-space: normal;
+        width: 200px;
+    
+    }
+
+    
+        .Buy-it-Now-button{
+            display: inline-block;
+            padding: 8px 16px;
+            margin: 0;
+            font-size: .875em;
+            font-family: Montserrat,sans-serif;
+            font-weight: 500;
+            font-style: normal;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            line-height: 1.8;
+            text-decoration: none;
+            text-align: center;
+            vertical-align: middle;
+            min-height: 44px;
+            white-space: nowrap;
+            cursor: pointer;
+            border: 1px solid transparent;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            -o-user-select: none;
+            user-select: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            border-radius: 2px;
+            background-color: #68a5c1;
+            color: #fff;
+            width: 200px;
+            margin-top: 0.7rem;
+        }
+    
     .Coffe-Image-Product{
         width: 600px;
+    }
+
+    .Add-to-cart{
+        color: #68a5c1;
+        font-size: 15px;
+        position: relative;
+    
     }
 
 }

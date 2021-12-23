@@ -4,11 +4,17 @@ import image from "../../Assets/Coffe-Bag.png";
 import { useParams } from 'react-router-dom'
 import "./Product.styles.scss";
 import { useLocation } from "react-router-dom";
+import { useState } from "react";
 
 const Product = () => {
     const { product } = useParams();
     const location= useLocation();
+    const [number, setNumber]= useState(1);
     const state= location.state.prop;
+
+    const handleChange=(event)=>{
+        setNumber(event.target.value)
+    }
     return (
         <section className="Product-section">
             <div className="Product-div">
@@ -21,7 +27,7 @@ const Product = () => {
             <div style={{display:"flex",flexDirection:"column"}}>
             <h3>Morning Aroma</h3>
             <h1>{state.name}</h1>
-            <span>{state.price}</span>
+            <span className="price">{state.price}</span>
                 <label for="Coffe">Grind</label>
                 <select name="Coffe-Grind" id="grind">
                 <option value="Whole Bean">Whole Bean</option>
@@ -29,6 +35,15 @@ const Product = () => {
                 <option value="Turkish">Turkish</option>
                 <option value="Stove Top Express">Stove Top Express</option>
                 </select>
+
+                <label className="coffe-quantity" for="Coffe">Quantity</label>
+                <input type="number" id="number" min="1" value={number} onChange={handleChange}></input>
+                <button  className="add-to-cart-button" type="submit">
+                    <span className="Add-to-cart">Add to Cart</span>
+                </button>
+                <button className="Buy-it-Now-button"type="submit">
+                    <span className="Buy-it-Now">Buy it now</span>
+                </button>
             </div>
         </div>
 
