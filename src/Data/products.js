@@ -25,16 +25,16 @@ const CoffeData = {
     },{
         "name":"Guji Coffee",
         "description": "Guji Coffee is a complex, bright, fruity and aromatic bean.It has rich, floral aromatics and sweet tropical fruit notes. These fruits are also present in its acidity which is medium and sweet. Other notes which are present are vanilla, cherry and cocoa.",
-        "price": "21.99"
+        "price": "$21.99"
     },{
         "name":"Guatemalan Fair Trade Organic",
         "description": "The Guatemalan Fair Trade Organic coffee beans have a bright acidity and a smooth rich body. The earthy flavours of this pure arabica coffee come from the region's excellent soils and growing conditions.",
-        "price":"14.99"
+        "price":"$14.99"
     },
     {
         "name":"Jamaica Blue Mountain Coffee",
         "description": "Medium Roasted and Ground Jamaica Blue Mountain Coffee Authentic Jamaica Blue Mountain Coffee Certified by the Coffee Industry Board of Jamaica. Package contains 100% pure Jamaica Blue Mountain Coffee",
-        "price":"19.99",
+        "price":"$19.99",
     }
 ]
 

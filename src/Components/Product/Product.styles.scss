@@ -36,6 +36,24 @@
     margin-left: 8rem;
     display: flex;
     margin-bottom: 4rem;
+    .button-divs{
+        width: fit-content;
+    display: flex;
+    flex-direction: column;
+    margin-left: 2rem;
+    top: 0.3rem;
+    position: relative;
+    }
+    p{
+        margin-top: 2rem;
+        font-size: 16px;
+        line-height: 1.7;
+        font-family: Montserrat,sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        color: #1b1e2f;
+        width: 500px;
+    }
 
     h3{
         font-family: Montserrat,sans-serif;
@@ -65,7 +83,7 @@
     }
 
     label{
-        margin-top: 2.5rem;
+        margin-top: 0.5rem;
         font-size: 18px;
     line-height: 1.7;
     font-family: Montserrat,sans-serif;
@@ -73,6 +91,7 @@
     font-style: normal;
     color: #1b1e2f;
     margin-bottom: 0.2rem;
+    
     }
     .coffe-quantity{
         margin-top: 0;
@@ -82,7 +101,9 @@
     font-weight: 400;
     font-style: normal;
     color: #1b1e2f;
-    margin-bottom: 0.2rem;  
+    margin-bottom: 0.2rem;
+    display: block;
+    
     }
 
     select{
@@ -90,7 +111,7 @@
         text-indent: 0.01px;
         cursor: pointer;
         border: 1px solid rgba(27,30,47,.15);
-        width: 100%;
+        width: 250px;
         max-width: 100%;
         display: block;
         margin: 0 0 1em;
@@ -172,7 +193,7 @@
             background-color: #68a5c1;
             color: #fff;
             width: 200px;
-            margin-top: 0.7rem;
+            margin-top: 2.65rem;
         }
     
     .Coffe-Image-Product{
@@ -185,7 +206,42 @@
         position: relative;
     
     }
-
 }
+
+    .Product-recommendation{
+        width: 90%;
+        margin: 0 auto;
+        position: relative;
+        margin-top: 1rem;
+        
+        .recommendation-tag{
+            font-family: Montserrat,sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        margin: 0 0 15px;
+        font-size: 18px;
+        }
+
+        .CardList-recommended{
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                display: grid;
+                width: 90%;
+                margin: 0 auto;
+                margin-top: 3rem;
+                text-align: center;
+                margin-bottom: 0rem;
+                .popular{
+                    color: #1b1e2f;
+                    font-size: 1.625em;
+                    line-height: 1.3;
+                    font-family: Montserrat,sans-serif;
+                    font-weight: 700;
+                }
+            
+        }
+
+    }
+
+
 }
 
