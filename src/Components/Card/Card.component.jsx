@@ -15,7 +15,7 @@ const Card =({prop})=> {
         
         <div className="Product-info">
         <h4>{prop.name}</h4>
-        <p>{prop.price}</p>
+        <p>${prop.price}</p>
         </div>
         </Link> 
     </div>)

@@ -2,8 +2,14 @@ import React from "react";
 import "./Espresso.styles.scss";
 import arrow from "../../../Assets/next.png";
 import CardList from "../../../Components/CardList/CardList.component";
+import { useState } from "react";
 
 const Espresso = () => {
+    const [sort, setSort]= useState();
+
+    const handleChange=(event)=>{
+        setSort(event.target.value)
+    }
     return(<section className="DarkRoast-section">
         <div className="DarkRoast-div">
         <h5 className="info-tag">Home</h5>
@@ -12,9 +18,20 @@ const Espresso = () => {
         </div>
         <header>
             <h1 className="DarkRoast-header-name">Espresso</h1>
+            <div>
+            <label for="Sort-By">Sort by</label>
+                <select value={sort}  onChange={handleChange} name="Sort-By-Select" id="select">
+
+                <option value="Featured">Featured</option>
+                <option value="Alphabetically, A-Z">Alphabetically, A-Z</option>
+                <option value="Alphabetically, Z-A">Alphabetically, Z-A</option>
+                <option value="Price, high to low">Price, high to low</option>
+                <option value="Price, low to high">Price, low to high</option>
+                </select>
+            </div>
         </header>
         <p>Espresso is a coffee-brewing method of Italian origin, in which a small amount of nearly boiling water is forced under 9–10 bars of pressure through finely-ground coffee beans. Espresso coffee can be made with a wide variety of coffee beans and roast degrees.</p>
-        <CardList name="Espresso"/>    
+        <CardList sorted={sort} name="Espresso"/>    
     </section>)
 };
 

@@ -42,6 +42,38 @@
 
 header{
     margin-top: 3rem;
+    display: flex;
+    justify-content: space-between;
+
+    label{
+        margin-top: 0.5rem;
+        font-size: 18px;
+    line-height: 1.7;
+    font-family: Montserrat,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #1b1e2f;
+    margin-bottom: 0.2rem;
+    }
+
+    select{
+        background-color: #fff;
+        text-indent: 0.01px;
+        cursor: pointer;
+        border: 1px solid rgba(27,30,47,.15);
+        width: 250px;
+        max-width: 100%;
+        display: block;
+        margin: 0 0 1em;
+        color: #333;
+        padding: 8px 10px;
+        line-height: 1.42;
+        font-family: Montserrat,sans-serif;
+        font-size: 16px;
+        display: inline-flex;
+        margin-left: 1rem;
+    }
+
 }
 p{
     font-size: 16px;
