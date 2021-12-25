@@ -160,6 +160,10 @@
         border-color: #68a5c1;
         white-space: normal;
         width: 200px;
+
+        &:hover{
+            opacity: 0.6;
+        }
     
     }
 
@@ -194,6 +198,10 @@
             color: #fff;
             width: 200px;
             margin-top: 2.65rem;
+
+            &:hover{
+                opacity: 0.7;
+            }
         }
     
     .Coffe-Image-Product{

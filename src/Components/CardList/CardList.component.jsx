@@ -12,7 +12,7 @@ import { useEffect,useState } from "react";
             <Card key ={index} prop={coffee}/>
         ))
      )
-     console.log(list)
+     
      useEffect(()=>{
        
              if(sorted==="Price, high to low"){ 
@@ -29,7 +29,8 @@ import { useEffect,useState } from "react";
                 <Card key ={index} prop={coffee}/>
             )));
        
-     },[sorted])
+     },[sorted]);
+     
     return(
     <div className="CardList">
         {list}

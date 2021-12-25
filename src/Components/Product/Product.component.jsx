@@ -7,29 +7,36 @@ import { useLocation } from "react-router-dom";
 import { useState } from "react";
 import CoffeData from "../../Data/products";
 import Card from "../Card/Card.component";
+import { useEffect} from "react";
+
 
 const Product = () => {
-    const { product } = useParams();
     const location= useLocation();
-    const [number, setNumber]= useState(1);
+    const { product } = useParams();
+   const [number, setNumber]= useState(1);
     const state= location.state.prop;
 
     const handleChange=(event)=>{
         setNumber(event.target.value)
     }
+
+    useEffect(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }, [location]);
+
     return (
         <section className="Product-section">
             <div className="Product-div">
         <h5 className="Product-info-tag">Home</h5>
         <img alt="arrow" className="arrow-right" src={arrow}></img>
-        <h5 className="Product-Tag">{product}</h5>
+        <h5 className="Product-Tag">{state.name}</h5>
         </div>
         <div className="Product-image-info">
             <img alt="coffe" src={image} className="Coffe-Image-Product"/>
             <div style={{display:"flex",flexDirection:"column"}}>
             <h3>Morning Aroma</h3>
             <h1>{state.name}</h1>
-            <span className="price">{state.price}</span>
+            <span className="price">${state.price}</span>
             <p>{state.description}</p>
             <div style={{display:"flex"}}>
                 <div>

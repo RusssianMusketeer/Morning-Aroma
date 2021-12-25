@@ -1,0 +1,98 @@
+.About-container{
+.video-container{
+    display: flex;
+    margin-top: 6.5rem;
+    justify-content: center;
+    
+    video{
+        width: 100%;
+    }
+        }
+
+    .Why-choose-us-section{
+        position: relative;
+        text-align: center;
+        margin-top: 8rem;
+        background-color: white;
+        height: 300px;
+      
+        .Aroma-span{
+          display: flex;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          position: absolute;
+          margin-top: 6rem;
+          z-index: 0;
+          span{
+          font-family: "Montserrat", sans-serif;
+          color:#ECECEC;
+          font-size: 180px;
+          font-weight: 700;
+          margin-right: 3rem;
+          margin-left: 3rem;
+          }
+        }
+      
+        .Why-choose-us-title{
+          font-family: "Montserrat", sans-serif;
+          font-size: 50px;
+          text-transform: uppercase;
+          letter-spacing: 20px;
+          font-weight: 700;
+          color: #333333;
+          position: relative;
+        }
+      
+        h5{
+          font-size: 15px;
+          color: #333333;
+          font-family: "Montserrat", sans-serif;
+          position: relative;
+        }
+      }
+      .Chose-us-cards-section{
+        background-color: white;
+        position: relative;
+        height: 600px;
+        .background-logo{
+          width: 60%;
+          position: absolute;
+          z-index: 0;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          top: 14rem;
+            path{
+              fill: #ECECEC;
+            }
+          
+        }
+      .Choose-us-cards{
+        display: grid;
+        width: 90%;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin: 0 auto;
+        position: relative;
+      svg{
+        path{
+          fill: #333333 !important;
+        }
+      }
+      .Choose-us-cards-div{
+        padding: 0 2rem;
+        text-align: center;
+        h4{
+          color: #333333;
+          font-family: "Montserrat", sans-serif;
+          font-size: 25px;
+          margin: 1.5rem;
+        }
+      
+        p{
+          font-family: 'Open Sans', sans-serif;
+          font-size: 14px;
+          line-height: 24px;
+          color: #4c4c4c;
+        }
+      }
+    }}
+}
