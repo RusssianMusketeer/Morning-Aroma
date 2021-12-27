@@ -1,20 +1,29 @@
-import react from "react";
 import arrow from "../../Assets/next.png";
 import image from "../../Assets/Coffe-Bag.png";
-import { useParams } from 'react-router-dom'
 import "./Product.styles.scss";
 import { useLocation } from "react-router-dom";
 import { useState } from "react";
 import CoffeData from "../../Data/products";
 import Card from "../Card/Card.component";
 import { useEffect} from "react";
+import image2 from "../../Assets/Coffee_green.png";
+import image3 from "../../Assets/Coffee_red.png";
 
 
 const Product = () => {
     const location= useLocation();
-    const { product } = useParams();
    const [number, setNumber]= useState(1);
     const state= location.state.prop;
+    let  type  = location.state.prop.categorie;
+    let ImageCard;
+
+    if (type==="Dark Roast") {
+        ImageCard = <img alt="coffe" src={image} className="Coffe-Image-Product"/>;
+      } else if (type==="Light Roast") {
+        ImageCard = <img alt="coffe" src={image2} className="Coffe-Image-Product"/>;
+      } else {
+        ImageCard = <img alt="coffe" src={image3} className="Coffe-Image-Product"/>;  
+      }
 
     const handleChange=(event)=>{
         setNumber(event.target.value)
@@ -32,7 +41,7 @@ const Product = () => {
         <h5 className="Product-Tag">{state.name}</h5>
         </div>
         <div className="Product-image-info">
-            <img alt="coffe" src={image} className="Coffe-Image-Product"/>
+            {ImageCard}
             <div style={{display:"flex",flexDirection:"column"}}>
             <h3>Morning Aroma</h3>
             <h1>{state.name}</h1>

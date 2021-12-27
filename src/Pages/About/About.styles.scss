@@ -1,4 +1,22 @@
 .About-container{
+  .about-us-title{
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: 17rem;
+    text-align: center;
+      -webkit-animation: fade-in 3.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+              animation: fade-in 3.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    
+    h1{
+      font-family: "Montserrat", sans-serif;
+      font-weight: 800;
+      color: white;
+      letter-spacing: 8px;
+      font-size: 55px;
+      
+  
+    }
+  }
 .video-container{
     display: flex;
     margin-top: 6.5rem;
@@ -95,4 +113,22 @@
         }
       }
     }}
+}
+
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

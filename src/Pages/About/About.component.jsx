@@ -7,25 +7,38 @@ import { ReactComponent as IconCoffee } from '../../Assets/icon-coffee-bean.svg'
 import { ReactComponent as IconGift } from '../../Assets/icon-gift.svg';
 import { ReactComponent as IconTruck } from '../../Assets/icon-truck.svg';
 import {ReactComponent as Logo} from "../../Assets/Morning Aroma.svg";
+import {ReactComponent as Arrow} from "../../Assets/arrow-down.svg";
 import video from "../../Assets/Coffee-video.mp4";
 import "./About.styles.scss";
 
+
+
+
 const About = () =>{
+    
     const [click, setClick] = useState();
+    
     useEffect(() => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
       }, [click]);
     
+
+    
     return (
         <div className="About-container">
+            <div style={{width:"100%", position:"absolute"}}>
+            <div  className="about-us-title">
+            <h1>About us</h1>
+            <Arrow  style={{width:"50px", fill:"white"}}/>
+            </div>
+            </div>
             <div className='video-container'>
-    
             <video loop="true" muted="muted" autoplay="autoplay" playsinline>
             <source src={video} type="video/mp4"/>
                 </video>
             </div>
         <NavBarSite/>
-        <section className="Why-choose-us-section">
+        <section  className="Why-choose-us-section">
             <div className="Aroma-span">
             <span>A</span>
             <span>R</span>
@@ -44,7 +57,7 @@ const About = () =>{
             </div>
 
         </section>
-        <section className="Chose-us-cards-section" >
+        <section  className="Chose-us-cards-section" >
             <Logo className="background-logo"/>
             <div className="Choose-us-cards">
             <div className="Choose-us-cards-div">
