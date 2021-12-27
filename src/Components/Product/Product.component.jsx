@@ -18,11 +18,11 @@ const Product = () => {
     let ImageCard;
 
     if (type==="Dark Roast") {
-        ImageCard = <img alt="coffe" src={image} className="Coffe-Image-Product"/>;
-      } else if (type==="Light Roast") {
         ImageCard = <img alt="coffe" src={image2} className="Coffe-Image-Product"/>;
+      } else if (type==="Light Roast") {
+        ImageCard = <img alt="coffe" src={image3} className="Coffe-Image-Product"/>;
       } else {
-        ImageCard = <img alt="coffe" src={image3} className="Coffe-Image-Product"/>;  
+        ImageCard = <img alt="coffe" src={image} className="Coffe-Image-Product"/>;  
       }
 
     const handleChange=(event)=>{
