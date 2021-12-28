@@ -14,7 +14,7 @@ import { Link } from "react-router-dom";
 const Product = () => {
     const location= useLocation();
     const [number, setNumber]= useState(1);
-    const [grind, setGrind]=useState();
+    const [grind, setGrind]=useState("Whole Bean");
     const state= location.state.prop;
     let  type  = location.state.prop.categorie;
     let ImageCard;
