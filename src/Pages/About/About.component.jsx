@@ -28,7 +28,7 @@ const About = () =>{
         <div className="About-container">
             <div style={{width:"100%", position:"absolute"}}>
             <div  className="about-us-title">
-            <h1>About us</h1>
+            <h1>About Us</h1>
             <Arrow  style={{width:"50px", fill:"white"}}/>
             </div>
             </div>

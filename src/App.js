@@ -12,6 +12,7 @@ import Espresso from './Pages/Shop/Espresso/Espresso.component';
 import Decaf from './Pages/Shop/Decaf/Decaf.component';
 import Product from './Components/Product/Product.component';
 import About from './Pages/About/About.component';
+import Cart from './Components/Cart/Cart.component';
 
 const App =()=>{
   return(
@@ -27,6 +28,7 @@ const App =()=>{
         <Route path="Light_Roast" element={<LightRoast/>}/>
         <Route path="Espresso" element={<Espresso/>}/>
         <Route path="Decaf" element={<Decaf/>}/>
+        <Route path="Cart" element={<Cart/>}/>
       </Route>
       <Route path="/about" element={<About/>}/> 
      </Routes>

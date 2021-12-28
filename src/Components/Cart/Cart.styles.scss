@@ -1,0 +1,209 @@
+.section_header_title {
+
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    h1{
+    color: #1b1e2f;
+    font-family: Montserrat,sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    margin: 0 0 15px;
+    font-size: 2.1em;
+    line-height: 1.2;
+
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+
+    }
+}
+
+.cart_rows{
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 1.5rem;
+    .cart_rows_names{
+        span{
+            color: #1b1e2f;
+            
+            font-size: 18px;
+            font-weight: 700;
+            font-family: Montserrat, sans-serif;
+            font-weight: 700;
+            font-style: normal;
+            margin: 0 0 15px;
+            
+            margin-left: 6rem;
+
+        }
+    }
+
+}
+
+
+.cart_row{
+
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    .cart_row_content{
+        display: flex;
+        justify-content: space-between;
+        padding-top: 1rem;
+            padding-bottom: 1rem;
+            
+            border-top: 2px solid #ddd;
+            border-bottom: 2px solid #ddd; 
+
+        .cart_row_content_image_info{
+            display: flex;
+            
+
+            h3{
+                margin-bottom: 0;
+                font-family: Montserrat,sans-serif;
+                font-weight: 700;
+                font-style: normal;
+                color: #68a5c1;
+            }
+
+            h4{
+                margin-top: 0.5rem;
+                margin-bottom: 0.5rem;
+                font-family: Montserrat,sans-serif;
+                font-weight: 400;
+                font-style: normal;
+                color: #1b1e2f;
+            }
+
+            span{
+                font-family: Montserrat,sans-serif;
+                font-weight: 400;
+                font-style: normal;
+                color: #68a5c1;
+            }
+        }
+
+        .cart_row_content_price_input{
+            span{
+                font-family: Montserrat,sans-serif;
+                font-weight: 700;
+                font-style: normal;
+                color: #1b1e2f;
+                font-size: 16px;
+                margin-left: 6rem;    
+            }
+
+            input {
+                width:40px;
+                border: 1px solid rgba(27,30,47,.15);
+                padding: 6px 8px;
+                line-height: 1.42;
+                margin-left: 7.1rem;
+            }
+        }
+
+    }
+}
+
+.cart_checkout_total{
+
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    text-align: end;
+    margin-top: 2rem;
+
+    .total{
+        font-size: 20px;
+        line-height: 1.7;
+        font-family: Montserrat,sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        color: #1b1e2f;
+    }
+
+    .total_price{
+        font-family: Montserrat,sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        color: #1b1e2f;
+        font-size: 16px;
+        margin-left: 1rem;
+    }
+
+    .buttons_shopping{
+        margin-top: 1rem;
+        margin-bottom: 5rem;
+
+        .checkout{
+            display: inline-block;
+            padding: 8px 16px;
+            margin: 0;
+            font-size: .875em;
+            font-family: Montserrat,sans-serif;
+            font-weight: 500;
+            font-style: normal;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            line-height: 1.8;
+            text-decoration: none;
+            text-align: center;
+            vertical-align: middle;
+            min-height: 44px;
+            white-space: nowrap;
+            cursor: pointer;
+            border: 1px solid transparent;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            -o-user-select: none;
+            user-select: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            border-radius: 2px;
+            background-color: #68a5c1;
+            color: #fff;
+            width: 200px;
+            margin-left: 1rem;
+            
+            &:hover{
+                opacity: 0.6;
+            }
+        }
+
+        .continue_shopping{
+            display: inline-block;
+        padding: 8px 16px;
+        margin: 0;
+        font-size: .875em;
+        font-family: Montserrat,sans-serif;
+        font-weight: 500;
+        font-style: normal;
+        letter-spacing: .1em;
+        text-transform: uppercase;
+        line-height: 1.8;
+        text-decoration: none;
+        text-align: center;
+        vertical-align: middle;
+        
+        white-space: nowrap;
+        cursor: pointer;
+        border: 1px solid transparent;
+        position: relative;
+        background-color: transparent;
+        color: #68a5c1;
+        border-color: #68a5c1;
+        white-space: normal;
+
+        &:hover{
+            opacity: 0.6;
+        }
+        }
+    }
+}
