@@ -20,6 +20,7 @@ const Product = () => {
     const dispatch = useDispatch();
     const state= location.state.prop;
     let  type  = location.state.prop.categorie;
+    console.log(location.state)
     let ImageCard;
    
 
