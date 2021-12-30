@@ -6,11 +6,14 @@ import {ReactComponent as Logo} from "../../Assets/Morning Aroma.svg";
 import Toggle from 'react-toggle'
 import MusicContext from '../../Context/musicContext';
 import { useContext } from 'react';
+import { Badge } from '@mui/material';
+import { useSelector } from 'react-redux';
 
 
 const NavBarSite = () => {
     
     const {play, stop, checked, setChecked} =useContext(MusicContext);
+    const quantity = useSelector(state=>state.cart.quantity);
 
    
     return (
@@ -51,8 +54,10 @@ const NavBarSite = () => {
 
                         </li>
                         <li>
-                        <Link to="/cart" >
+                        <Link to="/shop/Cart" >
+                        <Badge badgeContent={quantity} color="success">
                         <Cart className="Cart-Logo-Site"/>
+                        </Badge>
                         </Link>
                         </li>
                     </ul>

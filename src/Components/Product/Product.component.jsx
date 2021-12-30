@@ -9,15 +9,19 @@ import { useEffect} from "react";
 import image2 from "../../Assets/Coffee_green.png";
 import image3 from "../../Assets/Coffee_red.png";
 import { Link } from "react-router-dom";
+import { addProduct } from "../../Redux/cartRedux";
+import { useDispatch } from "react-redux";
 
 
 const Product = () => {
     const location= useLocation();
     const [number, setNumber]= useState(1);
     const [grind, setGrind]=useState("Whole Bean");
+    const dispatch = useDispatch();
     const state= location.state.prop;
     let  type  = location.state.prop.categorie;
     let ImageCard;
+   
 
     if (type==="Dark Roast") {
         ImageCard = <img alt="coffe" src={image2} className="Coffe-Image-Product"/>;
@@ -34,10 +38,19 @@ const Product = () => {
     const handleChangeGrind=(event)=>{
         setGrind(event.target.value)
     }
-    
+
     useEffect(() => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
       }, [location]);
+
+      state["bean"] = grind;
+      state["photo"] = imageColor;
+      state["quantity"] = number;
+      state["total"] = state.price*number;
+
+      const handleClick = () => {
+        dispatch(addProduct({product:state,quantity:state.quantity}))
+    }
 
     return (
         <section className="Product-section">
@@ -68,7 +81,7 @@ const Product = () => {
                 </div>
                 <div className="button-divs">
                 
-                <Link className="add-to-cart-button" type="submit" to="/shop/Cart" state={{
+                <Link onClick={handleClick} className="add-to-cart-button" type="submit" to="/shop/Cart" state={{
                     product:state,
                     quantity:number,
                     photo: imageColor,

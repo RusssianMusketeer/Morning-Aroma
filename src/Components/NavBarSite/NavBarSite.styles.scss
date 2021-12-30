@@ -23,10 +23,24 @@
     }
 
     .Cart-Logo-Site{
-        height: 50px;
-        width: 50px;
+        height: 35px;
+        width: 35px;
         fill: white;
-        margin-left: 25px;
+        margin-left: 30px;
+        bottom: 0.4rem;
+        position: relative;
+        
+    }
+
+    span{
+      font-size: 1.2rem;
+      font-family: "Open Sans", sans-serif;
+      font-weight: 600;
+      min-width: 25px;
+      height: 25px;
+      border-radius: 15px;
+
+      
     }
 
     .Navbar-Links-Site{

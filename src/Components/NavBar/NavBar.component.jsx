@@ -7,11 +7,15 @@ import {ReactComponent as Cart} from "../../Assets/Cart.svg";
 import {ReactComponent as Logo} from "../../Assets/Morning Aroma.svg";
 import Toggle from 'react-toggle'
 import { useContext } from 'react';
+import { useSelector } from 'react-redux';
+import { Badge } from '@mui/material';
+
 
 const NavBar = () => {
 
     const {play, stop, checked, setChecked} =useContext(MusicContext);
     const [scroll, setScroll] = useState(false);
+    const quantity = useSelector(state=>state.cart.quantity);
     
     
     useEffect(() => {
@@ -59,8 +63,10 @@ const NavBar = () => {
 
                         </li>
                         <li>
-                        <Link to="/cart" >
+                        <Link to="/shop/Cart" >
+                        <Badge badgeContent={quantity} color="success">
                         <Cart className="Cart-Logo"/>
+                        </Badge>
                         </Link>
                         </li>
                     </ul>
