@@ -7,9 +7,16 @@ import { useSelector } from 'react-redux';
 import { addProduct,modifyProduct,removeProduct } from "../../Redux/cartRedux";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
+import StripeCheckout from 'react-stripe-checkout';
+import imageAroma from "../../Assets/Morning_Aroma.png";
+import { useEffect } from "react";
+import axios from "axios";
+
+const Key ="pk_test_51JCBsWF4JALlSlqQHwoXpwQPRRwR4EpYNWta4kJkRj6drldJ3SXokPFAH3wPpHw4z74DpUu6UXZeRVEEngLy29wE001bcIl2Da";
 
 const Cart = () => {
 
+    const [stripeToken, setStripeToken] = useState(null);
     const info = useSelector(state=>state.cart.products);
     console.log(info)
     const total = useSelector(state=>state.cart.total);
@@ -25,6 +32,21 @@ const Cart = () => {
         
         dispatch(removeProduct(value));
     }
+
+    const onToken =(token) => {
+        setStripeToken(token);
+    }
+
+    useEffect(()=>{
+    const makeRequest = async () => {
+    try{
+        axios.post("http://localhost:5000/api/checkout/payment")
+    }
+    catch(err){
+        console.log(err)
+    }
+}
+    },[stripeToken])
     return (<section>
         <div className="section_header_title">
             <h1>Your Cart</h1>
@@ -78,8 +100,11 @@ const Cart = () => {
                 <span className="total_price">${(total.toFixed(2))}</span>
             </div>
             <div className="buttons_shopping">
+
                 <button className="continue_shopping"><Link to ="/shop">Continue Shopping</Link></button>
+                <StripeCheckout  description={`Your total is $${total}`}stripeKey={Key} token={onToken} name="Morning Aroma" image={imageAroma} samount={2000} billingAddress shippingAddress>
                 <button className="checkout">Checkout</button>
+                </StripeCheckout>
             </div>
 
         </div>}
