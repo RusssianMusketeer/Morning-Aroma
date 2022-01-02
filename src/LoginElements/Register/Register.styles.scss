@@ -1,4 +1,4 @@
-.create-section{
+.register-section{
     width: 90%;
     margin: 0 auto;
     form{
@@ -40,6 +40,14 @@
         background: 0 0;
         color: #68a5c1;
         cursor:pointer;
+
+        a{
+            color: #68a5c1;
+            text-decoration: none;
+            &:hover{
+                color: #9ec5d7;
+            }
+        }
 
         &:hover{
             color: #9ec5d7;

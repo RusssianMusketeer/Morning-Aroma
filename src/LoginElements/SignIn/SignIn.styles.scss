@@ -1,0 +1,89 @@
+.create-section{
+    width: 90%;
+    margin: 0 auto;
+    form{
+        margin-bottom: 15rem;
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 5rem;
+    }
+    h1{
+    font-family: Montserrat,sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #1b1e2f;
+    font-size: 40px;
+    }
+
+    input{
+        border: 2px solid rgba(27,30,47,.15);
+        width: 400px;
+        max-width: 100%;
+        display: block;
+        margin: 0 0 1em;
+        color: #333;
+        padding: 8px 10px;
+        line-height: 1.42;
+        border-radius: 3px;
+        margin-bottom: 1.5rem;
+        font-size: 16px;
+        font-family: Montserrat,sans-serif;
+    }
+
+    h3{
+        font-size: 16px;
+        line-height: 1.7;
+        font-family: Montserrat,sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        text-decoration: none;
+        background: 0 0;
+        color: #68a5c1;
+        cursor:pointer;
+
+        a{
+            color: #68a5c1;
+            text-decoration: none;
+            &:hover{
+                color: #9ec5d7;
+            }
+        }
+
+        &:hover{
+            color: #9ec5d7;
+        }
+    }
+
+    button{
+        display: inline-block;
+        padding: 8px 16px;
+        margin: 0;
+        font-size: 0.875em;
+        font-family: Montserrat, sans-serif;
+        font-weight: 500;
+        font-style: normal;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        line-height: 1.8;
+        text-decoration: none;
+        text-align: center;
+        vertical-align: middle;
+        min-height: 44px;
+        white-space: nowrap;
+        cursor: pointer;
+        border: 1px solid transparent;
+        -webkit-user-select: none;
+        -o-user-select: none;
+        user-select: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        border-radius: 2px;
+        background-color: #68a5c1;
+        color: #fff;
+        width: 120px;
+        
+        &:hover{
+            opacity: 0.7;
+        }
+    }
+}

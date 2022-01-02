@@ -14,7 +14,8 @@ import Product from './Components/Product/Product.component';
 import About from './Pages/About/About.component';
 import Cart from './Components/Cart/Cart.component';
 import LoginList from './Pages/Login/LoginList.component';
-import Create from './LoginElements/Create/Create.component';
+import SignIn from './LoginElements/SignIn/SignIn.component';
+import Register from './LoginElements/Register/Register.component';
 
 const App =()=>{
   return(
@@ -34,7 +35,8 @@ const App =()=>{
       </Route>
       <Route path="/about" element={<About/>}/>
       <Route path="/login" element={<LoginList/>}>
-        <Route index element={<Create/>}/>
+        <Route index element={<SignIn/>}/>
+        <Route path="register" element={<Register/>}/>
       </Route>
      </Routes>
      </MusicProvider>

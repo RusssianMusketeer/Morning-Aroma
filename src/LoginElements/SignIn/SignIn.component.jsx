@@ -1,7 +1,8 @@
 import react from "react";
-import "./Create.styles.scss";
+import "./SignIn.styles.scss";
+import { Link } from "react-router-dom";
 
-const Create = () => {
+const SignIn = () => {
     return (
         <section className="create-section">
             <h1>Sign In</h1>
@@ -13,8 +14,8 @@ const Create = () => {
                 </div>
                 <div style={{position:"relative",top:"-6px"}}>
                 <h3 style={{marginTop:"0"}}>Forgot your password ?</h3>
-                <h3>Create account</h3>
-                <h3>Return to store</h3>
+                <h3><Link to ="register">Create account</Link></h3>
+                <h3><Link to ="/shop">Return to store</Link></h3>
                 </div>
             </form>
 
@@ -22,4 +23,4 @@ const Create = () => {
     )
 };
 
-export default Create;
+export default SignIn;
