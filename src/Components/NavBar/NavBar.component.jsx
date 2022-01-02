@@ -47,7 +47,7 @@ const NavBar = () => {
                             </Link>
                         </li>
                         <li>
-                            <Link className={scroll ? "Navbar-Links" : "Navbar-Links-Scroll"} to="/sign-in">
+                            <Link className={scroll ? "Navbar-Links" : "Navbar-Links-Scroll"} to="/login">
                                 SIGN IN
                             </Link>
                         </li>

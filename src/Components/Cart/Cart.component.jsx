@@ -40,12 +40,17 @@ const Cart = () => {
     useEffect(()=>{
     const makeRequest = async () => {
     try{
-        axios.post("http://localhost:5000/api/checkout/payment")
+        const res = await axios.post("http://localhost:5000/api/checkout/payment", {
+            tokenId:stripeToken.id,
+            amount: total*100
+        })
+        console.log(res.data)
     }
     catch(err){
         console.log(err)
     }
-}
+    };
+    stripeToken && makeRequest();
     },[stripeToken])
     return (<section>
         <div className="section_header_title">
@@ -102,7 +107,7 @@ const Cart = () => {
             <div className="buttons_shopping">
 
                 <button className="continue_shopping"><Link to ="/shop">Continue Shopping</Link></button>
-                <StripeCheckout  description={`Your total is $${total}`}stripeKey={Key} token={onToken} name="Morning Aroma" image={imageAroma} samount={2000} billingAddress shippingAddress>
+                <StripeCheckout  currency="USD" description={`Your total is $${total}`} stripeKey={Key} token={onToken} name="Morning Aroma" image={imageAroma} amount={total*100} billingAddress shippingAddress>
                 <button className="checkout">Checkout</button>
                 </StripeCheckout>
             </div>

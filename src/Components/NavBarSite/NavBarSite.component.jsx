@@ -40,7 +40,7 @@ const NavBarSite = () => {
                             </Link>
                         </li>
                         <li>
-                            <Link className="Navbar-Links-Site"  to="/sign-in">
+                            <Link className="Navbar-Links-Site"  to="/login">
                                 SIGN IN
                             </Link>
                         </li>

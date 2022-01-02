@@ -13,6 +13,8 @@ import Decaf from './Pages/Shop/Decaf/Decaf.component';
 import Product from './Components/Product/Product.component';
 import About from './Pages/About/About.component';
 import Cart from './Components/Cart/Cart.component';
+import LoginList from './Pages/Login/LoginList.component';
+import Create from './LoginElements/Create/Create.component';
 
 const App =()=>{
   return(
@@ -30,7 +32,10 @@ const App =()=>{
         <Route path="Decaf" element={<Decaf/>}/>
         <Route path="Cart" element={<Cart/>}/>
       </Route>
-      <Route path="/about" element={<About/>}/> 
+      <Route path="/about" element={<About/>}/>
+      <Route path="/login" element={<LoginList/>}>
+        <Route index element={<Create/>}/>
+      </Route>
      </Routes>
      </MusicProvider>
      </div>
