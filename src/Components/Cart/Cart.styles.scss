@@ -259,6 +259,15 @@
     margin: 0 auto;
     text-align: end;
     margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 7rem;
+
+    p{
+        margin: 0.3rem;
+        color: red;
+        font-family: Montserrat,sans-serif;
+    }
 
     .total{
         font-size: 20px;

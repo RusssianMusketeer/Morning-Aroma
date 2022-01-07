@@ -1,16 +1,15 @@
 import React from "react";
 import "./Cart.styles.scss";
 import { useState } from "react";
-import image from "../../Assets/Coffe-Bag.png";
-import { useLocation } from "react-router-dom";
 import { useSelector } from 'react-redux';
-import { addProduct,modifyProduct,removeProduct } from "../../Redux/cartRedux";
+import {modifyProduct,removeProduct,clearProducts } from "../../Redux/cartRedux";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import StripeCheckout from 'react-stripe-checkout';
 import imageAroma from "../../Assets/Morning_Aroma.png";
 import { useEffect } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const Key ="pk_test_51JCBsWF4JALlSlqQHwoXpwQPRRwR4EpYNWta4kJkRj6drldJ3SXokPFAH3wPpHw4z74DpUu6UXZeRVEEngLy29wE001bcIl2Da";
 
@@ -19,8 +18,21 @@ const Cart = () => {
     const [stripeToken, setStripeToken] = useState(null);
     const info = useSelector(state=>state.cart.products);
     console.log(info)
-    const total = useSelector(state=>state.cart.total);
+    const total1 = useSelector(state=>(state.cart.total));
+    let navigate = useNavigate();
+    let user = useSelector(state=>{
+        if(state.user.currentUser===null){
+            return "";}
+        return state.user.currentUser
+        })
+    console.log(user, "user")
+    const total =total1;
+    const totalCents = +(total*100).toFixed(2);
+    console.log(totalCents)
     const dispatch = useDispatch();
+
+
+   
    
     const handleChange=(event)=>{
         const name= event.target.name;
@@ -39,12 +51,25 @@ const Cart = () => {
 
     useEffect(()=>{
     const makeRequest = async () => {
+        
     try{
         const res = await axios.post("http://localhost:5000/api/checkout/payment", {
             tokenId:stripeToken.id,
-            amount: total*100
+            amount: totalCents,
+        }).then( ()=>{
+            dispatch(clearProducts());
+            
         })
-        console.log(res.data)
+        
+        const order = await axios.put("http://localhost:5000/api/auth/order",{
+            username: user,
+            orders:{
+                info,
+            amount: total
+            }
+        })
+        navigate("/account");
+        
     }
     catch(err){
         console.log(err)
@@ -100,18 +125,25 @@ const Cart = () => {
         </div>))}
         {info.length===0 ? <div className="empty_cart_div"><button className="continue_shopping_empty"><Link to ="/shop">Continue Shopping</Link></button></div>
          :<div className="cart_checkout_total">
+             <div style={{textAlign:"initial"}}>
+                <p>Test Account</p>
+                <p>Card Number: 4242 4242 4242 4242</p>
+                <p>MM/YY: 08/24</p>
+                <p>CVC: 123</p>
+             </div>
+             <div>
             <div>
                 <span className="total">Total</span>
-                <span className="total_price">${(total.toFixed(2))}</span>
+                <span className="total_price">${(total).toFixed(2)}</span>
             </div>
             <div className="buttons_shopping">
 
                 <button className="continue_shopping"><Link to ="/shop">Continue Shopping</Link></button>
-                <StripeCheckout  currency="USD" description={`Your total is $${total}`} stripeKey={Key} token={onToken} name="Morning Aroma" image={imageAroma} amount={total*100} billingAddress shippingAddress>
+                <StripeCheckout  currency="USD" description={`Your total is $${total}`} stripeKey={Key} token={onToken} name="Morning Aroma" image={imageAroma} amount={totalCents} billingAddress shippingAddress>
                 <button className="checkout">Checkout</button>
                 </StripeCheckout>
             </div>
-
+            </div>
         </div>}
     
     </section>)

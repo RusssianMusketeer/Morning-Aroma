@@ -8,12 +8,29 @@ import MusicContext from '../../Context/musicContext';
 import { useContext } from 'react';
 import { Badge } from '@mui/material';
 import { useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
+import axios from 'axios';
+import { logOut } from '../../Redux/userRedux';
 
 
 const NavBarSite = () => {
     
     const {play, stop, checked, setChecked} =useContext(MusicContext);
     const quantity = useSelector(state=>state.cart.quantity);
+    const user = useSelector(state=>state.user.currentUser);
+    const dispatch = useDispatch();
+
+    const handleLogout = async () => {
+        try{
+
+            const order = await axios.get("http://localhost:5000/api/auth/logout");
+            dispatch(logOut());
+            console.log(order)
+        }
+        catch(err){
+            console.log(err)
+        }
+    };
 
    
     return (
@@ -40,9 +57,19 @@ const NavBarSite = () => {
                             </Link>
                         </li>
                         <li>
-                            <Link className="Navbar-Links-Site"  to="/login">
-                                SIGN IN
+                        {user === null ? null : <Link className="Navbar-Links-Site" onClick={handleLogout} to="/">
+                                LOG OUT
                             </Link>
+                            }
+                        </li>
+                        
+                        <li>
+                        {user === null ? <Link className="Navbar-Links-Site" to="/login">
+                                SIGN IN
+                            </Link> : <Link className="Navbar-Links-Site" to="/account">
+                                ACCOUNT
+                            </Link>
+                            }
                         </li>
                         <li>
                         <Toggle 

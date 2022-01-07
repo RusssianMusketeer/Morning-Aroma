@@ -16,6 +16,7 @@ import Cart from './Components/Cart/Cart.component';
 import LoginList from './Pages/Login/LoginList.component';
 import SignIn from './LoginElements/SignIn/SignIn.component';
 import Register from './LoginElements/Register/Register.component';
+import Account from './Pages/Account/Account.component';
 
 const App =()=>{
   return(
@@ -38,6 +39,7 @@ const App =()=>{
         <Route index element={<SignIn/>}/>
         <Route path="register" element={<Register/>}/>
       </Route>
+      <Route path="/account" element={<Account/>}/>
      </Routes>
      </MusicProvider>
      </div>

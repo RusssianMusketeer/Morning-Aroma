@@ -7,6 +7,26 @@
         justify-content: space-evenly;
         margin-top: 5rem;
     }
+    .div-error{
+    color: #d02e2e;
+    background-color: #fff6f6;
+    border-color: #d02e2e;
+    border-radius: 2px;
+    padding: 6px 12px;
+    margin-bottom: 30px;
+    border: 1px ;
+    font-size: .7em;
+    border-style: solid;
+    border-width: 1px;
+
+        h2{
+            margin-top: 0;
+            margin-bottom: 0;
+            font-family: Montserrat,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+        }
+    }
     h1{
     font-family: Montserrat,sans-serif;
     font-weight: 700;

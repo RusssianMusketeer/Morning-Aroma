@@ -8,14 +8,34 @@ import {ReactComponent as Logo} from "../../Assets/Morning Aroma.svg";
 import Toggle from 'react-toggle'
 import { useContext } from 'react';
 import { useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
+import { logOut } from '../../Redux/userRedux';
 import { Badge } from '@mui/material';
+import axios from 'axios';
+
 
 
 const NavBar = () => {
 
     const {play, stop, checked, setChecked} =useContext(MusicContext);
     const [scroll, setScroll] = useState(false);
+    const dispatch = useDispatch();
     const quantity = useSelector(state=>state.cart.quantity);
+    const user = useSelector(state=>state.user.currentUser);
+
+    const handleLogout = async () => {
+        try{
+
+            const order = await axios.get("http://localhost:5000/api/auth/logout");
+            dispatch(logOut());
+            console.log(order)
+        }
+        catch(err){
+            console.log(err)
+        }
+    };
+
+    
     
     
     useEffect(() => {
@@ -47,9 +67,18 @@ const NavBar = () => {
                             </Link>
                         </li>
                         <li>
-                            <Link className={scroll ? "Navbar-Links" : "Navbar-Links-Scroll"} to="/login">
-                                SIGN IN
+                        {user === null ? null : <Link className={scroll ? "Navbar-Links" : "Navbar-Links-Scroll"} onClick={handleLogout} to="/">
+                                LOG OUT
                             </Link>
+                            }
+                        </li>
+                        <li>
+                            {user === null ? <Link className={scroll ? "Navbar-Links" : "Navbar-Links-Scroll"} to="/login">
+                                SIGN IN
+                            </Link> : <Link className={scroll ? "Navbar-Links" : "Navbar-Links-Scroll"} to="/account">
+                                ACCOUNT
+                            </Link>
+                            }
                         </li>
 
                         <li>
