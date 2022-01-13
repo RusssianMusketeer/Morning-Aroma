@@ -1,11 +1,19 @@
 .register-section{
     width: 90%;
     margin: 0 auto;
+    cursor: default;
     form{
-        margin-bottom: 15rem;
+        margin-bottom: 17rem;
         display: flex;
         justify-content: space-evenly;
         margin-top: 5rem;
+
+        .div-registration{
+            @media (max-width:500px){
+                text-align: center;
+                width: 100% !important;
+                    }
+        }
     }
     h1{
     font-family: Montserrat,sans-serif;
@@ -28,6 +36,14 @@
         margin-bottom: 1.5rem;
         font-size: 16px;
         font-family: Montserrat,sans-serif;
+
+        @media (max-width:500px){
+            
+            width: 80% !important;
+            margin: 0 auto !important;
+            margin-bottom: 1.5rem !important;
+                }
+        
     }
 
     h3{

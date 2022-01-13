@@ -1,5 +1,5 @@
 import { loginFailure, loginStart, loginSuccess } from "./userRedux";
-import { register} from "./registerRedux"
+import { register,reset,resetError, resetStart} from "./registerRedux"
 import { publicRequest } from "../requestMethods";
 
 export const login = async ( dispatch,user)=>{
@@ -27,5 +27,18 @@ export const registerRequest = async ( dispatch,user)=>{
         dispatch(loginSuccess(JSON.parse(res.config.data)))
     }catch (err) {
         dispatch(loginFailure());
+    }
+}
+
+export const resetPassword = async (dispatch, user)=>{
+    dispatch(resetStart());
+    try {
+        const res = await publicRequest.post("/auth/reset",{
+        email:user.email,
+         }
+        )
+       dispatch(reset(JSON.parse(res.config.data)))
+    }catch (err) {
+        dispatch(resetError());
     }
 }

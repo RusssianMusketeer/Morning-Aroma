@@ -43,7 +43,7 @@ const SignIn = () => {
                 <button onClick={handleClick}>Sign In</button>
                 </div>
                 <div style={{position:"relative",top:"-6px"}}>
-                <h3 style={{marginTop:"0"}}>Forgot your password ?</h3>
+                <h3 style={{marginTop:"0"}}><Link to ="password-reset">Forgot your password ?</Link></h3>
                 <h3><Link to ="register">Create account</Link></h3>
                 <h3><Link to ="/shop">Return to store</Link></h3>
                 </div>

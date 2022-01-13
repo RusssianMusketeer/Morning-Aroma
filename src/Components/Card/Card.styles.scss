@@ -3,8 +3,26 @@
     height: fit-content;
     margin: 0 auto;
     margin-bottom: 4rem;
+    @media (max-width:525px){
+        margin-bottom: 1rem; 
+        
+        }
     img{
         transition: all .3s ease .25s;
+
+        @media (max-width:650px){
+            width: 220px!important;
+            
+            }
+
+            @media (max-width:525px){
+                width: 300px!important; 
+                
+                }
+                @media (max-width:450px){
+                    width: 210px!important; 
+                    
+                    }
     }
     
     &:hover{

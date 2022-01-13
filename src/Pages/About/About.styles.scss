@@ -6,6 +6,18 @@
     text-align: center;
       -webkit-animation: fade-in 3.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
               animation: fade-in 3.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+
+              @media (max-width:1000px){
+                margin-top: 10rem;
+                 
+                 }
+
+                 @media (max-width:670px){
+                  margin-top: 6rem;
+                   
+                   }
+
+                   
     
     h1{
       font-family: "Montserrat", sans-serif;
@@ -13,6 +25,20 @@
       color: white;
       letter-spacing: 8px;
       font-size: 55px;
+
+      @media (max-width:1000px){
+        font-size: 50px;
+         
+         }
+         @media (max-width:670px){
+          font-size: 40px;
+           
+           }
+
+           @media (max-width:475px){
+            font-size: 30px;
+             
+             }
       
   
     }
@@ -21,8 +47,22 @@
     display: flex;
     margin-top: 6.5rem;
     justify-content: center;
+    @media (max-width:500px){
+      margin-top: 6.2rem;
+       
+       }
+
+       @media (max-width:420px){
+        margin-top: 5.6rem;
+         
+         }
     
     video{
+      @media (max-width:450px){
+         
+      object-fit: cover;
+      height: 350px;
+      }
         width: 100%;
     }
         }
@@ -30,9 +70,23 @@
     .Why-choose-us-section{
         position: relative;
         text-align: center;
-        margin-top: 8rem;
+        margin-top: 5rem;
         background-color: white;
         height: 300px;
+        cursor: default;
+
+        @media (max-width:750px){
+          height: 200px;
+           }
+
+           svg{
+
+            @media (max-width:750px){
+              height: 30px;
+              width: 100%!important;
+               }
+           
+           }
       
         .Aroma-span{
           display: flex;
@@ -59,6 +113,23 @@
           font-weight: 700;
           color: #333333;
           position: relative;
+          z-index: 3;
+
+          @media (max-width:850px){
+            font-size: 40px;
+            letter-spacing: 10px;
+             }
+
+             @media (max-width:600px){
+              font-size: 30px;
+              letter-spacing: 7px;
+               }
+
+               @media (max-width:450px){
+                font-size: 20px;
+                letter-spacing: 5px;
+                 }
+        
         }
       
         h5{
@@ -66,19 +137,36 @@
           color: #333333;
           font-family: "Montserrat", sans-serif;
           position: relative;
+
+          @media (max-width:850px){
+            font-size: 12px;
+             }
+
+             @media (max-width:450px){
+              font-size: 10px;
+               }
+        
         }
       }
       .Chose-us-cards-section{
+        cursor: default;
         background-color: white;
         position: relative;
-        height: 600px;
+        height: 700px;
+        @media (max-width:750px){
+          height: auto !important;
+        }
         .background-logo{
-          width: 60%;
+          width: 90%;
           position: absolute;
           z-index: 0;
           left: 50%;
           transform: translate(-50%, -50%);
-          top: 14rem;
+          top: -2rem;
+
+          @media (min-width:1500px){
+            top: 10rem;
+          }
             path{
               fill: #ECECEC;
             }
@@ -90,6 +178,11 @@
         grid-template-columns: 1fr 1fr 1fr;
         margin: 0 auto;
         position: relative;
+
+        @media (max-width:750px){
+          grid-template-columns: none;
+          margin-bottom: 4rem;
+        }
       svg{
         path{
           fill: #333333 !important;

@@ -29,7 +29,7 @@ const Register = () => {
         <section className="register-section">
             <h1>Register</h1>
             <form onSubmit={handleClick}>
-                <div>
+                <div className="div-registration">
                 <input placeholder="Username" required onChange={(e)=> setUserName(e.target.value)}></input>
                 <input placeholder="Email" type="email" required onChange={(e)=> setEmail(e.target.value)}></input>
                 <input placeholder="Password" type="password" required onChange={(e)=> setPassword(e.target.value)}></input>

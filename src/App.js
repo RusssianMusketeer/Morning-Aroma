@@ -17,6 +17,8 @@ import LoginList from './Pages/Login/LoginList.component';
 import SignIn from './LoginElements/SignIn/SignIn.component';
 import Register from './LoginElements/Register/Register.component';
 import Account from './Pages/Account/Account.component';
+import Reset from './LoginElements/Reset/reset.component';
+import ResetPass from './LoginElements/ResetPass/ResetPass.component';
 
 const App =()=>{
   return(
@@ -38,6 +40,8 @@ const App =()=>{
       <Route path="/login" element={<LoginList/>}>
         <Route index element={<SignIn/>}/>
         <Route path="register" element={<Register/>}/>
+        <Route path="password-reset" element={<Reset/>}/>
+        <Route path="reset-pass/:token" element={<ResetPass/>}/>
       </Route>
       <Route path="/account" element={<Account/>}/>
      </Routes>

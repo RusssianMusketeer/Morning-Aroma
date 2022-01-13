@@ -2,10 +2,22 @@
    position: relative;
    width: fit-content;
    margin: 0 auto;
+   cursor: default;
 
    svg{
     width: 600px;
     height: fit-content;
+
+    @media (max-width:850px){
+        width: 400px;
+        }
+        @media (max-width:660px){
+            width: 300px;
+            }
+
+            @media (max-width:540px){
+                width: 250px;
+                }
     g{
         fill: white;
     }
@@ -18,7 +30,37 @@
     letter-spacing: 8px;
     font-size: 35px;
     margin-top: 25rem;
-   }
+    @media (max-width:1050px){
+    font-size: 30px;
+    }
+
+    @media (max-width:940px){
+        font-size: 24px;
+        }
+
+        @media (max-width:850px){
+            font-size: 20px;
+            }
+
+            @media (max-width:740px){
+                font-size: 16px;
+                }
+
+                @media (max-width:660px){
+                    letter-spacing: 4px;
+                    }
+                    @media (max-width:540px){
+                        letter-spacing: 2px;
+                        
+                        }
+                        @media (max-width:450px){
+                            font-size: 13px;
+                        }
+                        @media (max-width:380px){
+                            font-size: 11px;
+                        }
+   
+}
 
    .text-divider-div{
     width: fit-content;
@@ -32,5 +74,20 @@
     font-weight: 800;
     letter-spacing:4px;
     font-size: 20px;
+
+    @media (max-width:850px){
+        font-size: 16px;
+        }
+        @media (max-width:660px){
+            font-size: 14px;
+            }
+
+            @media (max-width:540px){
+                font-size: 13px;
+                
+                }
+                @media (max-width:380px){
+                    font-size: 11px;
+                }
    }
 }

@@ -13,6 +13,38 @@
         border-bottom: 2px solid #dddddd;
         padding-top: 10px;
         padding-bottom: 10px;
+        @media (max-width:450px){
+            text-align: center;
+            
+            }
+
+        .first-row-item{
+
+            @media (max-width:450px){
+                grid-column: span 2;
+                
+                }
+            
+        }
+
+        .second-row-item{
+            @media (max-width:450px){
+                margin-top: 0.4rem;
+                grid-column: span 3;
+                
+                }
+        }
+
+        @media (max-width:750px){
+            padding-left: 0;
+            
+            }
+
+            @media (max-width:450px){
+                display: grid!important;
+                grid-template-columns: repeat(6, 1fr); ;
+                
+                }
 
         li{
             cursor: pointer;
@@ -21,6 +53,16 @@
             font-size: 14px;
             transition: all 0.5s ease;
             font-weight: 500;
+
+            
+
+            @media (max-width:750px){
+                font-size: 11px!important;
+                
+                }
+
+               
+            
 
             &:hover{
                 color:#68a5c1!important;

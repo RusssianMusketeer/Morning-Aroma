@@ -7,6 +7,85 @@
     z-index: 10;
     background-color: #282828;
 
+    @media (max-width:870px){
+      background-color: #282828!important;
+      
+      }
+
+      @media (max-width:470px){
+        padding: 10px 20px!important;      
+        }
+        @media (max-width:400px){
+          padding: 5px 10px!important;      
+          }
+
+    .hamburger-section{
+      width: 100%;
+    background-color: #282828;
+    left: 0;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    position: absolute;
+    z-index: 0; 
+    height: 295px;
+    transition: top .5s ease-out;
+    display: flex;
+    align-items: self-end;
+
+    @media (min-width:870px){
+     display: none;
+      
+      }
+
+    @media (max-width:470px){
+      height: 270px;     
+      }
+
+    .hamburger-container{
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      z-index: 3;
+      
+  
+      a{  
+          text-decoration: none;
+          color:white;
+          width: 100%;
+          font-size: 17px;
+          display: block;
+          border-top: 1px solid #fff;
+          border-color: rgba(255,255,255,.2);
+          display: block;
+          padding: 12px 15px;
+          font-size: .9375em;
+          font-family: Montserrat,sans-serif;
+          font-weight: 700;
+          font-style: normal;
+          
+          
+          
+          transition: background-position 275ms ease;
+          @media (min-width:871px){
+            display: none;
+        }
+  
+          @media (max-width:870px){
+              align-self: center;
+              margin: 0 auto;
+              
+          }
+  
+          transition: color .3s ease ;
+          &:hover {
+            color: #777;
+            transition: color .3s ease ;
+            }
+          }
+      }}
+
 
     .NavBar-Container-Site{
     display: flex;
@@ -20,6 +99,21 @@
         text-decoration: none;
         font-family: 'Open Sans', sans-serif;
         font-weight: 900;
+
+        svg{
+              z-index: 3;
+              position: relative;
+          @media (max-width:600px){
+            width: 120px!important;
+            
+          }
+
+          @media (max-width:470px){
+            width: 100px!important;
+            
+          }
+        
+      }
     }
 
     .Cart-Logo-Site{
@@ -29,6 +123,10 @@
         margin-left: 30px;
         bottom: 0.4rem;
         position: relative;
+
+        @media (max-width:470px){
+          margin-left: 1rem;      
+          }
         
     }
 
@@ -45,7 +143,8 @@
 
     .Navbar-Links-Site{
         text-decoration: none;
-        color: #777;
+        color:white;
+        
         list-style-type: none;
         margin-left: 25px;
         margin-right: 25px;
@@ -55,8 +154,25 @@
         letter-spacing: 2.5px;
         transition: all .5s ease ;
 
+        @media (max-width:1030px){
+      
+          margin-left: 15px;
+        margin-right: 15px;
+      }
+
+      @media (max-width:930px){
+  
+        margin-left: 9px;
+        margin-right: 9px;
+        }
+
+        @media (max-width:870px){
+          display: none;
+          
+          }
+
         &:hover{
-            color:white;
+          color: #777;
             transition: all .5s ease ;
         }
     }
@@ -73,6 +189,22 @@
         letter-spacing: 2.5px;
         transition: all .5s ease ;
 
+        @media (max-width:1030px){
+      
+          margin-left: 15px;
+        margin-right: 15px;
+      }
+
+      @media (max-width:930px){
+  
+        margin-left: 9px;
+      margin-right: 9px;
+    }
+    @media (max-width:870px){
+      display: none;
+      
+      }
+
         &:hover{
             color:#777;
             transition: all .5s ease ;
@@ -85,6 +217,29 @@
     }
     li{
         list-style-type: none;
+        .hamburger-react{
+          color: white;
+          margin-right: 1rem;
+          z-index: 3;
+          transform: none;
+          @media (min-width:870px){
+            display: none;
+        }
+        @media (max-width:870px){
+          display: inline-block;
+        }    
+        @media (max-width:600px){
+          width: 40px!important;
+          height: 40px!important;
+          top: -4px;
+          margin-right: 1.5rem;
+        }
+
+        @media (max-width:470px){
+          margin-right: 1rem;      
+          }
+
+        }
     } 
     }
 
@@ -139,6 +294,11 @@
     -webkit-transition: all 0.2s ease;
     -moz-transition: all 0.2s ease;
     transition: all 0.2s ease;
+    @media (max-width:600px){
+      width: 45px!important;
+      height: 20px!important;
+      
+    }
   }
   
   .react-toggle:hover:not(.react-toggle--disabled) .react-toggle-track {
@@ -216,6 +376,11 @@
     -webkit-transition: all 0.25s ease;
     -moz-transition: all 0.25s ease;
     transition: all 0.25s ease;
+    @media (max-width:600px){
+      width: 19px!important;
+      height: 19px!important;
+      
+    }
   }
   
   .react-toggle--checked .react-toggle-thumb {

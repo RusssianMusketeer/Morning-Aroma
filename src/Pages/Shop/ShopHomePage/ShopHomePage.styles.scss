@@ -5,6 +5,13 @@
     .Carousel{
         --loader-bar-color:#282828;
     }
+
+    .awssld{
+        @media (max-width:400px){
+            height: 300px!important;
+            
+        }
+    }
 }
 
 .popular{
@@ -22,6 +29,7 @@
     font-size: 25px;
     font-weight: 600;
     text-align: center;
+    cursor: default;
 }
 
 .Shop-homepage-list{
@@ -33,6 +41,20 @@
         margin-top: 3rem;
         text-align: center;
         margin-bottom: 4rem;
+
+        @media (max-width:1200px){
+            grid-template-columns: 1fr 1fr 1fr;
+            
+            }
+            @media (max-width:900px){
+                grid-template-columns: 1fr 1fr ;
+                
+                }
+
+                @media (max-width:525px){
+                    grid-template-columns: 1fr ;
+                    
+                    }
         .popular{
             color: #1b1e2f;
             font-size: 1.625em;

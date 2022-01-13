@@ -20,6 +20,7 @@ const Account = () => {
     let products = useSelector(state=>state.cart.products);
     console.log(user,"hello")
     const [click, setClick] = useState();
+    
     useEffect(() => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
       }, [click]);
@@ -46,8 +47,9 @@ const Account = () => {
          getOrders();
         },[user,products])
 
-    
+        
     return(
+        
         <section>
            
         <NavBarSite />
@@ -62,7 +64,12 @@ const Account = () => {
             
         </div>
         <section className="account-section">
+            
             <h1>My Account</h1>
+            <h4>Account Information</h4>
+            
+            {orderHistory ===undefined ? null : <p>Username: {orderHistory.data.username}</p>}
+            {orderHistory ===undefined ? null : <p>Email: {orderHistory.data.email}</p>}
             <div>
             <h4>Order History</h4>
             {orderHistory ===undefined ?<p>You haven't placed any orders yet.</p> : null}
@@ -85,6 +92,7 @@ const Account = () => {
                     <h4 className="element-info-numbers-1">Price: ${element.price}</h4>
                         <h4 className="element-info-numbers" >Quantity: {element.quantity}</h4>
                         <h4 className="element-info-numbers">Total: ${element.total.toFixed(2)}</h4>
+                        <h4 className="element-info-numbers">Ordered: {new Date(orderHistory.data.updatedAt).toDateString()}</h4>
                     </div>
                 </div>)
             }

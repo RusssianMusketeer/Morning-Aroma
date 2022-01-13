@@ -62,7 +62,7 @@ const Product = () => {
         </div>
         <div className="Product-image-info">
             {ImageCard}
-            <div style={{display:"flex",flexDirection:"column"}}>
+            <div  className="product-buy-info" style={{display:"flex",flexDirection:"column"}}>
             <h3>Morning Aroma</h3>
             <h1>{state.name}</h1>
             <span className="price">${state.price}</span>
@@ -92,9 +92,6 @@ const Product = () => {
                     <span className="Add-to-cart">Add to Cart</span>
                 </Link>
                 
-                <button className="Buy-it-Now-button"type="submit">
-                    <span className="Buy-it-Now">Buy it now</span>
-                </button>
                 </div>
             </div>
             </div>

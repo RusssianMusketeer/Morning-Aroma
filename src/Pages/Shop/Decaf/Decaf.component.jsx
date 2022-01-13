@@ -1,5 +1,5 @@
 import React from "react";
-import "./Decaf.styles.scss";
+
 import arrow from "../../../Assets/next.png";
 import CardList from "../../../Components/CardList/CardList.component";
 import { useState } from "react";
@@ -18,7 +18,7 @@ const Decaf = () => {
         </div>
         <header>
             <h1 className="DarkRoast-header-name">Decaf</h1>
-            <div>
+            <div className="div-flex-sort">
             <label for="Sort-By">Sort by</label>
                 <select value={sort}  onChange={handleChange} name="Sort-By-Select" id="select">
 

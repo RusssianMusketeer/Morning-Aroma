@@ -12,7 +12,7 @@ import { useDispatch } from 'react-redux';
 import { logOut } from '../../Redux/userRedux';
 import { Badge } from '@mui/material';
 import axios from 'axios';
-
+import { Sling as Hamburger } from 'hamburger-react'
 
 
 const NavBar = () => {
@@ -22,6 +22,7 @@ const NavBar = () => {
     const dispatch = useDispatch();
     const quantity = useSelector(state=>state.cart.quantity);
     const user = useSelector(state=>state.user.currentUser);
+    const [isOpen, setOpen] = useState(false);
 
     const handleLogout = async () => {
         try{
@@ -47,7 +48,7 @@ const NavBar = () => {
         <nav className="HomePage-NavBar" style={scroll ? {backgroundColor:"#282828", padding: "7px 30px"} : {backgroundColor:"transparent"} }>
             <div className="NavBar-Container">
                 <div>
-                              <Link className="Navbar-Title" to ="/"><Logo style={{width: "150px"}}/></Link>
+                              <Link className="Navbar-Title" to ="/"><Logo  style={{width: "150px",zIndex: "3",position: "relative"}}/></Link>
                </div>
                 <div >
                     <ul>
@@ -80,7 +81,20 @@ const NavBar = () => {
                             </Link>
                             }
                         </li>
-
+                        <li>
+                            <Hamburger  toggled={isOpen} toggle={setOpen} />
+                        </li>
+                        <div className='hamburger-section' style={isOpen? {top:(user != null ? "30px" :"0px")}: {top: "-295px"}}>
+                        <div className="hamburger-container" >
+                            <Link  className="hamburger" to='/'> HOME </Link>
+                            <Link   className="hamburger" to='/shop'> SHOP </Link>
+                            <Link   className="hamburger" to='/about'> ABOUT </Link>
+                            {user === null ? null : <Link   className="hamburger" onClick={handleLogout} to='/'> LOG OUT </Link>}
+                            {user === null ? <Link   className="hamburger" to='/login'> SIGN IN </Link>
+                            :<Link   className="hamburger" to='/account'> ACCOUNT </Link> }
+             
+                        </div>
+                        </div>   
                         <li>
                          
                         <Toggle 

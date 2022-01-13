@@ -21,11 +21,11 @@ const ProductList = () => {
         <NavBarSite />
         <div className="Shop-Menu">
             <ul>
-                <Link style={{textDecoration:"none" }}to="/shop"><li style={{fontWeight: (path=== "/shop") ? '800' : "500"}}>HOME</li></Link>
-                <Link style={{textDecoration:"none"}} to="Dark_Roast"><li style={{fontWeight: (path=== "/shop/Dark_Roast") ? '800' : "500"}}>DARK ROAST</li> </Link>
-                <Link style={{textDecoration:"none"}}to="Light_Roast"><li style={{fontWeight: (path=== "/shop/Light_Roast") ? '800' : "500"}}>LIGHT ROAST</li></Link>
-                <Link style={{textDecoration:"none"}}to="Espresso"><li style={{fontWeight: (path=== "/shop/Espresso") ? '800' : "500"}}>ESPRESSO</li></Link>
-                <Link style={{textDecoration:"none"}}to="Decaf"><li style={{fontWeight: (path=== "/shop/Decaf") ? '800' : "500"}}>DECAF</li></Link>
+                <Link className="first-row-item" style={{textDecoration:"none" }}to="/shop"><li  style={{fontWeight: (path=== "/shop") ? '800' : "500"}}>HOME</li></Link>
+                <Link className="first-row-item"style={{textDecoration:"none"}} to="Dark_Roast"><li className="first-row-item" style={{fontWeight: (path=== "/shop/Dark_Roast") ? '800' : "500"}}>DARK ROAST</li> </Link>
+                <Link className="first-row-item"style={{textDecoration:"none"}}to="Light_Roast"><li  style={{fontWeight: (path=== "/shop/Light_Roast") ? '800' : "500"}}>LIGHT ROAST</li></Link>
+                <Link className="second-row-item" style={{textDecoration:"none"}}to="Espresso"><li  className="second-row-item"style={{fontWeight: (path=== "/shop/Espresso") ? '800' : "500"}}>ESPRESSO</li></Link>
+                <Link className="second-row-item" style={{textDecoration:"none"}}to="Decaf"><li className="second-row-item" style={{fontWeight: (path=== "/shop/Decaf") ? '800' : "500"}}>DECAF</li></Link>
             </ul>
             
         </div>

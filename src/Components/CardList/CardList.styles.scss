@@ -6,6 +6,20 @@
     margin-top: 3rem;
     text-align: center;
     margin-bottom: 4rem;
+
+    @media (max-width:1200px){
+        grid-template-columns: 1fr 1fr 1fr;
+        
+        }
+        @media (max-width:900px){
+            grid-template-columns: 1fr 1fr ;
+            
+            }
+
+            @media (max-width:525px){
+                grid-template-columns: 1fr ;
+                
+                }
     .popular{
         color: #1b1e2f;
         font-size: 1.625em;

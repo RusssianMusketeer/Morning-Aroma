@@ -31,8 +31,6 @@ const Cart = () => {
     console.log(totalCents)
     const dispatch = useDispatch();
 
-
-   
    
     const handleChange=(event)=>{
         const name= event.target.name;
@@ -45,12 +43,24 @@ const Cart = () => {
         dispatch(removeProduct(value));
     }
 
+    const verifyUser =(event)=>{
+        console.log("verifyyy");
+        
+        if(user===""){
+        event.stopPropagation()
+        navigate("/login")
+        }
+    }
+
     const onToken =(token) => {
+        
         setStripeToken(token);
     }
 
     useEffect(()=>{
     const makeRequest = async () => {
+
+        
         
     try{
         const res = await axios.post("http://localhost:5000/api/checkout/payment", {
@@ -114,6 +124,12 @@ const Cart = () => {
                     <span  className="remove_span" onClick={()=>handleRemove(index)} >Remove</span>
                 </div>
                 </div>
+                <div className="cart_rows_names_responsive">
+                <span>Price</span>
+                <span>Quantity</span>
+                <span>Total</span>
+
+                </div>
                 <div className="cart_row_content_price_input">
                     <span>${item.price}</span>
                     <input type="number" name={index} onChange={handleChange} value={item.quantity} min="1"></input>
@@ -125,7 +141,7 @@ const Cart = () => {
         </div>))}
         {info.length===0 ? <div className="empty_cart_div"><button className="continue_shopping_empty"><Link to ="/shop">Continue Shopping</Link></button></div>
          :<div className="cart_checkout_total">
-             <div style={{textAlign:"initial"}}>
+             <div style={{textAlign:"initial",cursor: "default"}}>
                 <p>Test Account</p>
                 <p>Card Number: 4242 4242 4242 4242</p>
                 <p>MM/YY: 08/24</p>
@@ -140,7 +156,7 @@ const Cart = () => {
 
                 <button className="continue_shopping"><Link to ="/shop">Continue Shopping</Link></button>
                 <StripeCheckout  currency="USD" description={`Your total is $${total}`} stripeKey={Key} token={onToken} name="Morning Aroma" image={imageAroma} amount={totalCents} billingAddress shippingAddress>
-                <button className="checkout">Checkout</button>
+                <button onClick={verifyUser}  className="checkout">Checkout</button>
                 </StripeCheckout>
             </div>
             </div>

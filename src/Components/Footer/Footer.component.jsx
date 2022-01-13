@@ -21,7 +21,7 @@ const Footer = ({prop}) => {
                 <Instagram className="social" style={{width:"25px", fill:"white", marginRight:"0.5rem", marginLeft:"0.5rem", cursor:"pointer"}}/>
             </div>
             <div>
-            <p>All Rights Reserved. © 2022 Morning Aroma</p>
+            <p style={{cursor: "default"}}>All Rights Reserved. © 2022 Morning Aroma</p>
             </div>
 
         </div>

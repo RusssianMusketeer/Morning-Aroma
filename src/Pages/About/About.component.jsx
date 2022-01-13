@@ -39,20 +39,14 @@ const About = () =>{
             </div>
         <NavBarSite/>
         <section  className="Why-choose-us-section">
-            <div className="Aroma-span">
-            <span>A</span>
-            <span>R</span>
-            <span>O</span>
-            <span>M</span>
-            <span>A</span>
-            </div>
+            
             <div>
             <h1 className="Why-choose-us-title">Why choose us ?</h1>
             </div>
-            <div>
+            <div style={{zIndex:"2",position:"relative"}}>
             <h5>WE ARE NOT A THIRD-WAVE COFFEE SHOP, WE ARE HAPPY TO SERVE YOU</h5>
             </div>
-            <div>
+            <div style={{zIndex:"2",position:"relative"}}>
             <TextDivider style={{width:"400px"}}/>
             </div>
 

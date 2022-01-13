@@ -11,6 +11,8 @@ import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 import axios from 'axios';
 import { logOut } from '../../Redux/userRedux';
+import { Sling as Hamburger } from 'hamburger-react'
+import { useState } from 'react';
 
 
 const NavBarSite = () => {
@@ -19,6 +21,7 @@ const NavBarSite = () => {
     const quantity = useSelector(state=>state.cart.quantity);
     const user = useSelector(state=>state.user.currentUser);
     const dispatch = useDispatch();
+    const [isOpen, setOpen] = useState(false);
 
     const handleLogout = async () => {
         try{
@@ -64,13 +67,27 @@ const NavBarSite = () => {
                         </li>
                         
                         <li>
-                        {user === null ? <Link className="Navbar-Links-Site" to="/login">
+                            {user === null ? <Link className="Navbar-Links-Site" to="/login">
                                 SIGN IN
                             </Link> : <Link className="Navbar-Links-Site" to="/account">
                                 ACCOUNT
                             </Link>
                             }
                         </li>
+                        <li>
+                            <Hamburger  toggled={isOpen} toggle={setOpen} />
+                        </li>
+                        <div className='hamburger-section' style={isOpen? {top:(user != null ? "30px" :"0px")}: {top: "-295px"}}>
+                        <div className="hamburger-container" >
+                            <Link  className="hamburger" to='/'> HOME </Link>
+                            <Link   className="hamburger" to='/shop'> SHOP </Link>
+                            <Link   className="hamburger" to='/about'> ABOUT </Link>
+                            {user === null ? null : <Link   className="hamburger" onClick={handleLogout} to='/'> LOG OUT </Link>}
+                            {user === null ? <Link   className="hamburger" to='/login'> SIGN IN </Link>
+                            :<Link   className="hamburger" to='/account'> ACCOUNT </Link> }
+             
+                        </div>
+                        </div>  
                         <li>
                         <Toggle 
                         defaultChecked={checked}

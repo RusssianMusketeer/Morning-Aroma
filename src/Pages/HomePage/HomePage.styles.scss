@@ -7,6 +7,16 @@
     top: 27rem;
     margin-bottom: 25rem;
 
+    @media (max-width:760px){
+      margin-bottom: 17rem;
+      
+      }
+
+      @media (max-width:580px){
+        margin-bottom: 12rem;
+        
+        }
+
     .HomePage-extra-Image{
       background-size: contain;
       height: 500px;
@@ -14,6 +24,37 @@
       margin: 0 auto;
       position: relative;
       top: 6rem;
+      cursor: default;
+
+      @media (max-width:980px){
+        height: 450px;
+        
+    }
+
+    @media (max-width:860px){
+      height: 400px;
+      
+  }
+    @media (max-width:760px){
+    height: 350px;
+    
+    }
+
+    @media (max-width:660px){
+      height: 300px;
+      
+      }
+
+      @media (max-width:580px){
+        height: 250px;
+        }
+
+        @media (max-width:480px){
+          height: 200px;
+          }
+    
+
+      
     
   }
 
@@ -23,6 +64,41 @@
     bottom: 16rem;
     margin-left: 40%;
     text-align: center;
+    cursor: default;
+    @media (max-width:980px){
+      width: 400px;
+      margin-left: 35%;
+      
+    }
+
+    @media (max-width:870px){
+     bottom: 14rem;
+      
+    }
+    @media (max-width:770px){
+      bottom: 12rem;
+       
+     }
+     @media (max-width:660px){
+      bottom: 7rem;
+      margin-left: 27%;
+      }
+
+      @media (max-width:600px){
+        bottom: 7rem;
+        margin-left: 23%;
+        }
+
+        @media (max-width:575px){
+          width: 100%;
+          margin: 0 auto;
+          }
+          @media (max-width:480px){
+            bottom:5rem;
+            }
+     
+
+    
 
     h1{
       font-family: 'Montserrat', sans-serif;
@@ -33,11 +109,39 @@
       color:#333333;
       margin: 0 auto;
       margin-left: 1rem;
+      @media (max-width:980px){
+        font-size: 35px;
+        
+      }
+      @media (max-width:740px){
+        font-size: 30px;
+         
+       }
+       @media (max-width:660px){
+        font-size: 25px;
+        letter-spacing: 15px;
+        }
+
+        @media (max-width:575px){
+          position: relative;
+          top: 4.5rem;
+          }
+
+          
     }
     svg{
     g{
       fill: #333333;
     }
+    @media (max-width:980px){
+      width: 300px!important;
+      height: 50px!important;
+    }
+    @media (max-width:450px){
+      width: 250px!important;
+      height: 50px!important;
+    }
+   
   }
   p{
     font-size: 15px;
@@ -45,6 +149,21 @@
     color: #333333;
     bottom: 1rem;
     position: relative;
+    @media (max-width:980px){
+      font-size: 13px;
+      
+    }
+    @media (max-width:660px){
+      font-size: 11px;
+      }
+
+      @media (max-width:575px){
+        font-weight: 700;
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 12rem;
+        font-size: 13px;
+        }
   }
   }
   

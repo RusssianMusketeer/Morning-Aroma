@@ -2,6 +2,7 @@
     width: 90%;
     margin: 0 auto;
     margin-top: 3rem;
+    cursor: default;
 .Product-div{
     display: flex;
     align-items: center;
@@ -36,6 +37,39 @@
     margin-left: 8rem;
     display: flex;
     margin-bottom: 4rem;
+
+
+    .product-buy-info{
+
+        display: flex;
+        flex-direction: column;
+
+        @media (max-width:1250px){
+            align-items: center;
+            margin-top: 1rem;
+            }        
+    }
+
+    @media (max-width:1350px){
+        margin-left: 0;
+        
+        }
+
+        @media (max-width:1250px){
+            flex-direction: column;
+            
+            }
+    img{
+        @media (max-width:1350px){
+            width: 500px !important;
+            
+            }
+            @media (max-width:1250px){
+                width: 80% !important;
+                margin: 0 auto;
+                
+                }
+    }
     .button-divs{
         width: fit-content;
     display: flex;
@@ -53,6 +87,13 @@
         font-style: normal;
         color: #1b1e2f;
         width: 500px;
+        @media (max-width:1250px){
+            text-align: center;
+            
+            }
+            @media (max-width:550px){
+                width: 100%;
+                }
     }
 
     h3{
@@ -62,6 +103,10 @@
         color: #1b1e2f;
         font-size: 22px;
         margin: 0.1rem 0;
+
+        @media (max-width:550px){
+        font-size: 18px;
+            }
     }
 
     h1{
@@ -71,7 +116,13 @@
         color: #1b1e2f;
         font-size: 30px;
         margin: 0;
+        @media (max-width:550px){
+            font-size: 24px;
+            text-align: center;
+                }
+
     }
+    
 
     .price{
         color: #68a5c1;
@@ -79,6 +130,9 @@
         font-weight: 700;
         position: relative;
         top: 1rem;
+        @media (max-width:550px){
+            font-size: 18px;
+                }
     
     }
 
@@ -91,6 +145,11 @@
     font-style: normal;
     color: #1b1e2f;
     margin-bottom: 0.2rem;
+    @media (max-width:450px){
+                    
+       font-size: 15px;
+        
+            }
     
     }
     .coffe-quantity{
@@ -103,6 +162,12 @@
     color: #1b1e2f;
     margin-bottom: 0.2rem;
     display: block;
+
+    @media (max-width:450px){
+                    
+        font-size: 15px;
+         
+             }
     
     }
 
@@ -121,6 +186,23 @@
         font-family: Montserrat,sans-serif;
         font-size: 16px;
         
+        @media (max-width:550px){
+            font-size: 14px;
+            width: 180px;
+                }
+
+                @media (max-width:450px){
+                    
+                    width: 130px;
+                    
+                        }
+                        @media (max-width:360px){
+                    
+                            width: 110px;
+                            
+                                }
+
+                        
         
     }
 
@@ -133,6 +215,16 @@
         line-height: 1.42;
         border: 1px solid rgba(27,30,47,.15);
         width: 100px;
+        @media (max-width:550px){
+            
+            width: 70px;
+        }     
+
+        @media (max-width:450px){
+            
+            width: 40px;
+            
+                }
     }
 
     .add-to-cart-button{
@@ -159,6 +251,11 @@
         color: #68a5c1;
         border-color: #68a5c1;
         white-space: normal;
+        @media (max-width:550px){
+            padding: 5px 12px;
+            font-size: 9px;
+            
+                }
        
 
         &:hover{
@@ -168,41 +265,6 @@
     }
 
     
-        .Buy-it-Now-button{
-            display: inline-block;
-            padding: 8px 16px;
-            margin: 0;
-            font-size: .875em;
-            font-family: Montserrat,sans-serif;
-            font-weight: 500;
-            font-style: normal;
-            letter-spacing: .1em;
-            text-transform: uppercase;
-            line-height: 1.8;
-            text-decoration: none;
-            text-align: center;
-            vertical-align: middle;
-            min-height: 44px;
-            white-space: nowrap;
-            cursor: pointer;
-            border: 1px solid transparent;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            -o-user-select: none;
-            user-select: none;
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            border-radius: 2px;
-            background-color: #68a5c1;
-            color: #fff;
-            width: 200px;
-            margin-top: 2.65rem;
-
-            &:hover{
-                opacity: 0.7;
-            }
-        }
     
     .Coffe-Image-Product{
         width: 600px;
@@ -212,6 +274,17 @@
         color: #68a5c1;
         font-size: 15px;
         position: relative;
+        @media (max-width:450px){
+            
+            font-size: 12px;
+            
+                }
+
+                @media (max-width:360px){
+            
+                    font-size: 10px;
+                    
+                        }
     
     }
 }
@@ -221,6 +294,11 @@
         margin: 0 auto;
         position: relative;
         margin-top: 1rem;
+
+        @media (max-width:1250px){
+            width: 100%;
+             
+            }
         
         .recommendation-tag{
             font-family: Montserrat,sans-serif;
@@ -238,6 +316,22 @@
                 margin-top: 3rem;
                 text-align: center;
                 margin-bottom: 0rem;
+                @media (max-width:1250px){
+                    width: 100%;
+                     
+                    }
+                    @media (max-width:750px){
+                        grid-template-columns: 1fr 1fr;
+                        
+                        }
+
+                    img{
+                        width: 100% !important;
+                    }
+                        .Product-info{
+                            width: 90%!important;
+                        }
+
                 .popular{
                     color: #1b1e2f;
                     font-size: 1.625em;

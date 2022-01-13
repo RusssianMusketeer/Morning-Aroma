@@ -2,6 +2,7 @@
     width: 90%;
     margin: 0 auto;
     margin-top: 3rem;
+    cursor: default;
 
     .DarkRoast-header-name{
         color: #1b1e2f;
@@ -45,6 +46,17 @@ header{
     display: flex;
     justify-content: space-between;
 
+    @media (max-width:675px){
+        
+        flex-direction: column;
+        }
+        .div-flex-sort{
+            @media (max-width:675px){
+                display: flex;
+                flex-direction: column;
+                }
+        }
+
     label{
         margin-top: 0.5rem;
         font-size: 18px;
@@ -72,6 +84,10 @@ header{
         font-size: 16px;
         display: inline-flex;
         margin-left: 1rem;
+        @media (max-width:675px){
+            margin-left: 0;
+            width: 100%;
+            }
     }
 
 }
@@ -80,5 +96,10 @@ p{
     line-height: 1.7;
     font-family: Montserrat,sans-serif;
     font-weight: 400; 
+
+    @media (max-width:500px){
+    font-size: 14px!important;
+    
+    }
 }
 }
