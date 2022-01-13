@@ -67,8 +67,8 @@ const Product = () => {
             <h1>{state.name}</h1>
             <span className="price">${state.price}</span>
             <p>{state.description}</p>
-            <div style={{display:"flex"}}>
-                <div>
+            <div className="input-select-info" style={{display:"flex"}}>
+                <div className="input-select-info-choice">
                 <label for="Coffe">Grind</label>
                 <select name="Coffe-Grind" id="grind" value={grind} onChange={handleChangeGrind}>
                 <option value="Whole Bean">Whole Bean</option>

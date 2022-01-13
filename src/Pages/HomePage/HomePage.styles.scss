@@ -137,9 +137,8 @@
       width: 300px!important;
       height: 50px!important;
     }
-    @media (max-width:450px){
-      width: 250px!important;
-      height: 50px!important;
+    @media (max-width:575px){
+      display: none!important;
     }
    
   }
@@ -158,11 +157,14 @@
       }
 
       @media (max-width:575px){
-        font-weight: 700;
+        
         width: 80%;
         margin: 0 auto;
-        margin-top: 12rem;
-        font-size: 13px;
+        margin-top: 14rem;
+        font-size: 15px;
+    line-height: 1.4;
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
         }
   }
   }
