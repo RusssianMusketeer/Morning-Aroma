@@ -16,7 +16,9 @@
             }
 
             @media (max-width:525px){
-                width: 105%!important; 
+                width: 105%!important;
+                right: 1.5rem;
+                position: relative; 
                 
                 }
     }
@@ -33,6 +35,13 @@
     .Product-info{
         left: 1.3rem;
         position: relative;
+
+        @media (max-width:525px){
+            position: relative;
+            text-align: center;
+            left: 0 !important;
+            
+            }
         
 
     h4{
@@ -42,14 +51,22 @@
         line-height: 1.4;
         font-weight: 700;
         margin-bottom: 0;
+        @media (max-width:525px){
+            font-size: 18px; 
+            
+            }
     }
 
     p{
     font-family: Montserrat,sans-serif;
-    font-size: .75em;
+    font-size: 0.95em;
     line-height: 1.5;
     color: #2e334f;
     margin-top: 0.5rem;
+    @media (max-width:525px){
+        font-size: 16px!important; 
+        
+        }
     }
 }
 
