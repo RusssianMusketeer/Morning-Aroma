@@ -1,4 +1,3 @@
-import react from "react";
 import CoffeData from "../../Data/products";
 import Card from "../Card/Card.component";
 import "./CardList.styles.scss";

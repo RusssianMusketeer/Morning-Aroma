@@ -69,7 +69,7 @@ const Cart = () => {
         
         
     try{
-        const res = await axios.post("http://localhost:5000/api/checkout/payment", {
+        const res = await axios.post("https://morning-aroma.herokuapp.com/api/checkout/payment", {
             tokenId:stripeToken.id,
             amount: totalCents,
         }).then( ()=>{
@@ -77,7 +77,7 @@ const Cart = () => {
             
         })
         
-        const order = await axios.put("http://localhost:5000/api/auth/order",{
+        const order = await axios.put("https://morning-aroma.herokuapp.com/api/auth/order",{
             username: user,
             orders:{
                 info,

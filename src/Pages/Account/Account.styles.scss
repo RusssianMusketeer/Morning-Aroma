@@ -46,15 +46,13 @@
     border: 2px #D5D9D9 solid;
     border-radius: 20px;
     margin-bottom: 2rem;
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
     margin-bottom: 2rem;
     box-shadow: 0 0 5px #ccc;
     transition: box-shadow .3s;
 
-    @media (max-width:950px){
-        width: 100%!important;
-         }
+    
 
          @media (max-width:550px){
             flex-direction: column;
@@ -116,6 +114,7 @@
     @media (max-width:725px){
         padding: 0 !important;
         padding-left: 1rem!important;
+        padding-right: 1rem!important;
          }
 
          @media (max-width:550px){

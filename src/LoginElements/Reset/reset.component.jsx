@@ -1,13 +1,9 @@
-import react from "react";
 import "./reset.styles.scss";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { resetPassword } from "../../Redux/api-calls";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
-import axios from "axios";
-import { reset } from "../../Redux/registerRedux";
 
 const Reset = () => {
     

@@ -1,13 +1,7 @@
-import react from "react";
 import "./ResetPass.styles.scss";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { resetPassword } from "../../Redux/api-calls";
-import { useDispatch } from "react-redux";
-import { useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import { reset } from "../../Redux/registerRedux";
 import { useParams } from "react-router-dom";
 
 const ResetPass = () => {
@@ -18,13 +12,12 @@ const ResetPass = () => {
     const [errorupdated, seterrorUpdated]= useState(false)
     const [errorInvalid, setErrorInvalid] = useState(false);
     const { token } = useParams();
-    const dispatch = useDispatch();
-    const error = useSelector((state)=>(state.register.reset_error));
+    
     
     const handleClick =(e) => {
     e.preventDefault();
     
-     axios.put("http://localhost:5000/api/auth/new-password",{
+     axios.put("https://morning-aroma.herokuapp.com/api/auth/new-password",{
             username: username,
             password: password,
         }).then( (response)=>{
@@ -42,7 +35,7 @@ const ResetPass = () => {
 
     useEffect(()=>{
         const reviewPass = async ()=> {
-            await axios.get("http://localhost:5000/api/auth/password-review",{
+            await axios.get("https://morning-aroma.herokuapp.com/api/auth/password-review",{
             params: {
                 resetPasswordToken: token
             },

@@ -29,7 +29,7 @@ const Account = () => {
         const getOrders = async () => {
             
         try{
-            const orders = await axios.get("http://localhost:5000/api/auth/history", {
+            const orders = await axios.get("https://morning-aroma.herokuapp.com/api/auth/history", {
                 params:
                 {username: user},
                 paramsSerializer: params => {
@@ -93,7 +93,7 @@ const Account = () => {
                     <h4 className="element-info-numbers-1">Price: ${element.price}</h4>
                         <h4 className="element-info-numbers" >Quantity: {element.quantity}</h4>
                         <h4 className="element-info-numbers">Total: ${element.total.toFixed(2)}</h4>
-                        <h4 className="element-info-numbers">Ordered: {new Date(orderHistory.data.updatedAt).toDateString()}</h4>
+                        
                     </div>
                     
                 </div>)

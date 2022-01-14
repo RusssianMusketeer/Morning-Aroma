@@ -26,7 +26,7 @@ const NavBarSite = () => {
     const handleLogout = async () => {
         try{
 
-            const order = await axios.get("http://localhost:5000/api/auth/logout");
+            const order = await axios.get("https://morning-aroma.herokuapp.com/api/auth/logout");
             dispatch(logOut());
             console.log(order)
         }

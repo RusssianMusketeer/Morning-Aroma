@@ -5,10 +5,6 @@ import HomePageTitle from '../../Components/HomePage-Title/HomePage-Title.compon
 import coffeeImage from "../../Assets/Title-coffee-image.jpg";
 import "./HomePage.styles.scss";
 import { ReactComponent as TextDivider } from '../../Assets/text-divider.svg';
-import { ReactComponent as IconCoffee } from '../../Assets/icon-coffee-bean.svg';
-import { ReactComponent as IconGift } from '../../Assets/icon-gift.svg';
-import { ReactComponent as IconTruck } from '../../Assets/icon-truck.svg';
-import {ReactComponent as Logo} from "../../Assets/Morning Aroma.svg";
 import Footer from '../../Components/Footer/Footer.component';
 import { useEffect, useState } from 'react';
 

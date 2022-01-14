@@ -17,7 +17,7 @@ const Pay = () =>{
 useEffect (()=>{
     const makeRequest = async () =>{
         try {
-            const res = await axios.post("http://localhost:5000/api/checkout/payment",
+            const res = await axios.post("https://morning-aroma.herokuapp.com/api/checkout/payment",
             {
                tokenId: stripe?.id,
                amount:2000,

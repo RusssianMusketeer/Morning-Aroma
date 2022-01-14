@@ -1,5 +1,3 @@
-import react from "react";
-import CardList from "../../../Components/CardList/CardList.component";
 import image1 from "../../../Assets/Carousel_1.jpg";
 import image2 from "../../../Assets/Carouse_2.jpg";
 import image3 from "../../../Assets/Carousel_3.jpg";
