@@ -10,11 +10,13 @@ import imageAroma from "../../Assets/Morning_Aroma.png";
 import { useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 const Key ="pk_test_51JCBsWF4JALlSlqQHwoXpwQPRRwR4EpYNWta4kJkRj6drldJ3SXokPFAH3wPpHw4z74DpUu6UXZeRVEEngLy29wE001bcIl2Da";
 
 const Cart = () => {
 
+    const location= useLocation();
     const [stripeToken, setStripeToken] = useState(null);
     const info = useSelector(state=>state.cart.products);
     console.log(info)
@@ -56,6 +58,10 @@ const Cart = () => {
         
         setStripeToken(token);
     }
+
+    useEffect(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }, [location]);
 
     useEffect(()=>{
     const makeRequest = async () => {
