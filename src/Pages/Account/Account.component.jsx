@@ -55,11 +55,11 @@ const Account = () => {
         <NavBarSite />
         <div className="Shop-Menu">
             <ul>
-                <Link style={{textDecoration:"none" }}to="/shop"><li style={{fontWeight: (path=== "/shop") ? '800' : "500"}}>HOME</li></Link>
-                <Link style={{textDecoration:"none"}} to="/shop/Dark_Roast"><li style={{fontWeight: (path=== "/shop/Dark_Roast") ? '800' : "500"}}>DARK ROAST</li> </Link>
-                <Link style={{textDecoration:"none"}}to="/shop/Light_Roast"><li style={{fontWeight: (path=== "/shop/Light_Roast") ? '800' : "500"}}>LIGHT ROAST</li></Link>
-                <Link style={{textDecoration:"none"}}to="/shop/Espresso"><li style={{fontWeight: (path=== "/shop/Espresso") ? '800' : "500"}}>ESPRESSO</li></Link>
-                <Link style={{textDecoration:"none"}}to="/shop/Decaf"><li style={{fontWeight: (path=== "/shop/Decaf") ? '800' : "500"}}>DECAF</li></Link>
+                <Link className="first-row-item" style={{textDecoration:"none" }}to="/shop"><li style={{fontWeight: (path=== "/shop") ? '800' : "500"}}>HOME</li></Link>
+                <Link className="first-row-item" style={{textDecoration:"none"}} to="/shop/Dark_Roast"><li style={{fontWeight: (path=== "/shop/Dark_Roast") ? '800' : "500"}}>DARK ROAST</li> </Link>
+                <Link className="first-row-item" style={{textDecoration:"none"}}to="/shop/Light_Roast"><li style={{fontWeight: (path=== "/shop/Light_Roast") ? '800' : "500"}}>LIGHT ROAST</li></Link>
+                <Link className="second-row-item"  style={{textDecoration:"none"}}to="/shop/Espresso"><li className="second-row-item" style={{fontWeight: (path=== "/shop/Espresso") ? '800' : "500"}}>ESPRESSO</li></Link>
+                <Link className="second-row-item"  style={{textDecoration:"none"}}to="/shop/Decaf"><li className="second-row-item" style={{fontWeight: (path=== "/shop/Decaf") ? '800' : "500"}}>DECAF</li></Link>
             </ul>
             
         </div>
@@ -81,6 +81,7 @@ const Account = () => {
                     <div>
                     <img alt="coffe" style={{width:"230px",marginRight:"1.5rem"}} src={element.photo}></img>
                     </div>
+                    
                     <div>
                         <h3 className="element-name">{element.name}</h3>
                         <h4 className="element-info">Grind setting: {element.bean}</h4>
@@ -94,6 +95,7 @@ const Account = () => {
                         <h4 className="element-info-numbers">Total: ${element.total.toFixed(2)}</h4>
                         <h4 className="element-info-numbers">Ordered: {new Date(orderHistory.data.updatedAt).toDateString()}</h4>
                     </div>
+                    
                 </div>)
             }
 

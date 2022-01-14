@@ -22,6 +22,13 @@
 
             @media (max-width:450px){
                 grid-column: span 2;
+                border-style: solid;
+                border-right: 0;
+                border-left: 0;
+                border-width: 2px;
+                border-top: 0;
+                padding-bottom: 0.8rem;
+                border-color: #dddddd;
                 
                 }
             
@@ -54,15 +61,15 @@
             transition: all 0.5s ease;
             font-weight: 500;
 
-            
-
             @media (max-width:750px){
-                font-size: 11px!important;
+                font-size: 13px!important;
                 
                 }
 
-               
-            
+                @media (max-width:360px){
+                    font-size: 12px!important;
+                    
+                    }
 
             &:hover{
                 color:#68a5c1!important;
