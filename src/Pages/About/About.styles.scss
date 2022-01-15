@@ -152,7 +152,14 @@
         cursor: default;
         background-color: white;
         position: relative;
-        height: 700px;
+        height: 500px;
+
+        @media (max-width:1000px){
+          height: 600px;
+        }
+        @media (max-width:850px){
+          height: 700px;
+        }
         @media (max-width:750px){
           height: auto !important;
         }
@@ -200,7 +207,7 @@
       
         p{
           font-family: 'Open Sans', sans-serif;
-          font-size: 14px;
+          font-size: 17px;
           line-height: 24px;
           color: #4c4c4c;
         }

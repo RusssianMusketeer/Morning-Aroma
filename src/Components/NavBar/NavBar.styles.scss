@@ -8,6 +8,7 @@
         z-index: 3;
         background-color: transparent;
         transition: all .5s ease .25s;
+        width: -moz-available;
 
         @media (max-width:870px){
           background-color: #282828!important;
@@ -34,6 +35,8 @@
           transition: top .5s ease-out;
           display: flex;
           align-items: self-end;
+          align-items: flex-end;
+          
           @media (min-width:870px){
             display: none;
              

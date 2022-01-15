@@ -24,7 +24,8 @@ const HomePage = () =>{
         <HomePageTitle/>
         <section  className="HomePage-Information-Section">
             <div>
-                <div  className="HomePage-extra-Image" style={{backgroundImage:`linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(249,249,249,1) 50%, rgba(255,255,255,1) 100%), url(${coffeeImage})`}}>
+                <div  className="HomePage-extra-Image">
+                <img alt="coffe" src={coffeeImage}></img>
                 </div>
                 <div className="HomePage-Information-text" >
                     <h1>Welcome</h1>
