@@ -18,7 +18,7 @@ const DarkRoast = () => {
         </div>
         <header>
             <h1 className="DarkRoast-header-name">Dark Roast</h1>
-            <div>
+            <div className="div-flex-sort">
             <label for="Sort-By">Sort by</label>
                 <select value={sort}  onChange={handleChange} name="Sort-By-Select" id="select">
 

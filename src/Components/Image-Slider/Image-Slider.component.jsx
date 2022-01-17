@@ -18,14 +18,14 @@ const Images =[
 const ImageSlider = ({images, ...props}) => {
   const [index, setIndex] = useState(0);
   const transitions = useTransition(Images[index],item =>item.id,{
-      from: { opacity: 0 },
-      enter: { opacity: 1 },
-      leave: { opacity: 0 },
+    from: { opacity: 0 },
+    enter: { opacity: 1 },
+    leave: { opacity: 2 },
       key: Images[index].id,
       config: config.molasses,
     });
 
-    useEffect(() => void setInterval(() => setIndex(state => (state + 1) % 5), 3000), [])
+    useEffect(() => void setInterval(() => setIndex(state => (state + 1) % 5), 5000), [])
   
   
       return( transitions.map(({key,item,props})=>(
