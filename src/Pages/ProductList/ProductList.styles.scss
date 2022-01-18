@@ -1,3 +1,8 @@
+.shop-menu-display{
+    display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
 .Shop-Menu{
     position: relative;
     z-index: 3;
@@ -103,4 +108,4 @@
     font-size: 25px;
     font-weight: 400;
     text-align: center;
-}
+}}

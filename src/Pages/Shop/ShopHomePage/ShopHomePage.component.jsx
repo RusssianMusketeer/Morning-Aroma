@@ -11,7 +11,7 @@ import Card from "../../../Components/Card/Card.component";
 const ShopHomePage = () => {
     const AutoplaySlider = withAutoplay(AwesomeSlider);
 return (
-    <section>
+    <section className="shop-section">
     <Outlet/>
 <div className="Carousel-Wrapper">
         <AutoplaySlider

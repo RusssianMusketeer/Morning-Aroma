@@ -21,7 +21,7 @@ const ProductList = () => {
     
     
     return(
-        <section>
+        <section className="shop-menu-display">
            
         <NavBarSite />
         <div className="Shop-Menu">

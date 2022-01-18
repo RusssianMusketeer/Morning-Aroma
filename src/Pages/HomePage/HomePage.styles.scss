@@ -1,4 +1,10 @@
 
+.HomePage-container{
+display: flex;
+min-height: 100vh;
+flex-direction: column;
+justify-content: space-between;
+
   .HomePage-Information-Section{
     width: 100%;
     height: 800px;
@@ -195,4 +201,4 @@ svg{
   }
 }
 }
-}
+}}

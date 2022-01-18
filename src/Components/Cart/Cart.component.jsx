@@ -93,7 +93,7 @@ const Cart = () => {
     };
     stripeToken && makeRequest();
     },[stripeToken])
-    return (<section>
+    return (<section className="cart-aroma">
         <div className="section_header_title">
             <h1>Your Cart</h1>
         </div>
@@ -110,7 +110,7 @@ const Cart = () => {
         info.map((item,index)=>(<div className="cart_row" >
             <div className={index===0 ? "cart_row_content" : "cart_row_content_second" }>
                 <div className="cart_row_content_image_info">
-                <img alt="coffe" style={{width:"200px",marginRight:"1.5rem"}} src={item.photo}></img>
+                <img alt="coffe" style={{width:"200px",marginRight:"1.5rem",height:"auto"}} src={item.photo}></img>
                 <div>
                     <Link to ={`/shop/${item.name.replace(/ /g, '-')}`} style={{textDecoration:"none"}}state={{
                         prop:{
@@ -161,7 +161,7 @@ const Cart = () => {
             <div className="buttons_shopping">
 
                 <button className="continue_shopping"><Link to ="/shop">Continue Shopping</Link></button>
-                <StripeCheckout  currency="USD" description={`Your total is $${total}`} stripeKey={Key} token={onToken} name="Morning Aroma" image={imageAroma} amount={totalCents} billingAddress shippingAddress>
+                <StripeCheckout  currency="USD" description={`Your total is $${total.toFixed(2)}`} stripeKey={Key} token={onToken} name="Morning Aroma" image={imageAroma} amount={totalCents} billingAddress shippingAddress>
                 <button onClick={verifyUser}  className="checkout">Checkout</button>
                 </StripeCheckout>
             </div>
