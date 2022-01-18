@@ -1,4 +1,8 @@
 .About-container{
+  display: flex;
+min-height: 100vh;
+flex-direction: column;
+justify-content: space-between;
   .about-us-title{
     width: fit-content;
     margin: 0 auto;
@@ -171,9 +175,7 @@
           transform: translate(-50%, -50%);
           top: -2rem;
 
-          @media (min-width:1500px){
-            top: 10rem;
-          }
+          
             path{
               fill: #ECECEC;
             }

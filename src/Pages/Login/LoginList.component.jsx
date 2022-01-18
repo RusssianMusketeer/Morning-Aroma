@@ -15,7 +15,7 @@ const LoginList = () => {
     
     
     return(
-        <section>
+        <section className="loginList">
            
         <NavBarSite />
         <div className="Shop-Menu">
