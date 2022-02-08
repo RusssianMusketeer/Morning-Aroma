@@ -71,12 +71,3 @@ This is a fake ecommerce website, create an account and then add the desired pro
 
 [MIT](https://choosealicense.com/licenses/mit/)
 
-## Screenshots
-
-![App Screenshot](https://photos-webapp-portfolio.s3.us-east-2.amazonaws.com/Personal+Portfolio.png)
-
-
-## Demo
-
-Insert gif or link to demo
-
